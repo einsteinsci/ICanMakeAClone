@@ -255,7 +255,7 @@ namespace ICanMakeAClone.ONAF2
 			if (IsExposing && Level.Office.IsLightOn && !Manager.Eyesaur.IsExposing &&
 				!Manager.Clown.IsExposing)
 			{
-				Level.Exposure += EXPOSURE_RATE * (float)gt.Elapsed.TotalSeconds;
+				Level.Exposure += EXPOSURE_RATE * (float)gt.Elapsed.TotalSeconds * ExposureMultiplier;
 			}
 
 			if (Level.IsJumpscaring && Manager.currentJumpscarer == this && gt.FrameCount % 5 == 0)

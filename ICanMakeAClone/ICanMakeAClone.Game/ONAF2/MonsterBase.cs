@@ -25,6 +25,8 @@ namespace ICanMakeAClone.ONAF2
 
 		public virtual bool ShakesOnJumpscare => true;
 
+		internal float ExposureMultiplier => Level.HardBoiled ? Level.HARDBOILED_EXPOSURE_MULTIPLIER : 1.0f;
+
 		internal SpriteSheet mapIcons => Manager.mapIcons;
 
 		internal List<SoundEffect> spookSounds => Manager.spookSounds;

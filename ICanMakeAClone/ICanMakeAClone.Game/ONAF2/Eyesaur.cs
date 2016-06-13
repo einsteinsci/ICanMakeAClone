@@ -234,7 +234,14 @@ namespace ICanMakeAClone.ONAF2
 
 			if (IsExposing && Level.Office.IsLightOn)
 			{
-				Level.Exposure += EXPOSURE_RATE * (float)gt.Elapsed.TotalSeconds;
+				if (Level.HardBoiled && Level.Exposure > 0.25f)
+				{
+					Level.Exposure = 1.0f; // DIE
+				}
+				else
+				{
+					Level.Exposure += EXPOSURE_RATE * (float)gt.Elapsed.TotalSeconds * ExposureMultiplier;
+				}
 			}
 
 			if (Level.IsJumpscaring && Manager.currentJumpscarer == this && gt.FrameCount % 4 == 0)

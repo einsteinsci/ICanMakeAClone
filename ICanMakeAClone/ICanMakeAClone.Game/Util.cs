@@ -168,5 +168,13 @@ namespace ICanMakeAClone
 
 			return res;
 		}
+
+		public static void PlayIfNotPlaying(this SoundMusic music)
+		{
+			if (music.PlayState != SoundPlayState.Playing)
+			{
+				music.Play();
+			}
+		}
 	}
 }

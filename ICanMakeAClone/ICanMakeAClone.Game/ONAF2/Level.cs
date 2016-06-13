@@ -23,6 +23,7 @@ namespace ICanMakeAClone.ONAF2
 		public const float SHAKE_SPEED = 90.0f;
 		public const float FLIPUP_THRESHOLD = 620.0f;
 		public const float SPAM_FADE_TIME = 1.0f;
+		public const float HARDBOILED_EXPOSURE_MULTIPLIER = 2.0f;
 
 		public const string BATTERY_DEFAULT_TEXT = "LAPTOP BATTERY";
 		public const string BATTERY_CHARGE_TEXT = "CHARGING...";
@@ -86,14 +87,8 @@ namespace ICanMakeAClone.ONAF2
 		public bool IsJumpscaring
 		{ get; set; }
 
-		internal bool CHEAT_InfiniteExposure
-		{ get; private set; }
-
-		internal bool CHEAT_MapDebug
-		{ get; private set; }
-
-		internal bool CHEAT_MonstersStayPut
-		{ get; private set; }
+		public bool HardBoiled
+		{ get; set; }
 
 		public string TimeShown
 		{
@@ -103,11 +98,9 @@ namespace ICanMakeAClone.ONAF2
 				{
 					return "12 AM";
 				}
-				else
-				{
-					float hour = Time / SECONDS_PER_HOUR;
-					return hour.ToString("F0") + " AM";
-				}
+
+				float hour = Time / SECONDS_PER_HOUR;
+				return hour.ToString("F0") + " AM";
 			}
 		}
 
@@ -128,6 +121,15 @@ namespace ICanMakeAClone.ONAF2
 				return TimeSpan.FromHours(hoursSinceMidnight);
 			}
 		}
+
+		internal bool CHEAT_InfiniteExposure
+		{ get; private set; }
+
+		internal bool CHEAT_MapDebug
+		{ get; private set; }
+
+		internal bool CHEAT_MonstersStayPut
+		{ get; private set; }
 
 		internal SpriteFont hourFont;
 		internal SpriteFont uiFont;
@@ -269,6 +271,7 @@ namespace ICanMakeAClone.ONAF2
 
 			Monsters.Update(gt, input);
 
+			// Cheats
 			if (input.IsKeyPressed(Keys.D6))
 			{
 				Time = VICTORY_TIME;
@@ -352,8 +355,8 @@ namespace ICanMakeAClone.ONAF2
 
 			if (Main.UI.State == UIState.Office && Office.IsLightOn)
 			{
-				float chargeSpeed = 1.0f / LAPTOP_BATTERY_TIME;
-				LaptopBattery = Math.Min(LaptopBattery + chargeSpeed * (float)gt.Elapsed.TotalSeconds, 1.0f);
+				const float CHARGE_SPEED = 1.0f / LAPTOP_BATTERY_TIME;
+				LaptopBattery = Math.Min(LaptopBattery + CHARGE_SPEED * (float)gt.Elapsed.TotalSeconds, 1.0f);
 			}
 		}
 

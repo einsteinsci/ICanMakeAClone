@@ -95,6 +95,7 @@ namespace ICanMakeAClone.ONAF2
 
 		internal SoundMusic musicIntro;
 		internal SoundMusic musicClassicalish;
+		internal SoundMusic musicToreador;
 		
 		internal SpriteAnimation officeVentAnim;
 
@@ -124,11 +125,21 @@ namespace ICanMakeAClone.ONAF2
 				if (IsLightOn)
 				{
 					soundLightOn.Play();
+
+					if (!Level.HardBoiled)
+					{
+						musicClassicalish.Play();
+					}
 				}
 				else
 				{
 					soundLightOff.Play();
 					Level.Monsters.GoldenFlumpty.Shoo();
+
+					if (!Level.HardBoiled) // Don't pause music in hard boiled mode
+					{
+						musicClassicalish.Pause();
+					}
 				}
 			});
 
@@ -161,7 +172,15 @@ namespace ICanMakeAClone.ONAF2
 				musicIntro.Stop();
 				showMuteButton = false;
 				muteButtonTimer.Stop();
-				musicClassicalish.Play();
+
+				if (Level.HardBoiled)
+				{
+					musicToreador.Play();
+				}
+				else
+				{
+					musicClassicalish.Play();
+				}	
 			});
 
 			Vent = VentState.Left;
@@ -194,9 +213,13 @@ namespace ICanMakeAClone.ONAF2
 				showMuteButton = true;
 				muteButtonTimer = new HelperTimer(TimeSpan.FromSeconds(15.0), true, "MuteSong", () => {
 					showMuteButton = false;
-					if (musicClassicalish.PlayState != SoundPlayState.Playing)
+					if (Level.HardBoiled)
 					{
-						musicClassicalish.Play();
+						musicToreador.PlayIfNotPlaying();
+					}
+					else
+					{
+						musicClassicalish.PlayIfNotPlaying();
 					}
 				});
 			});

@@ -162,7 +162,19 @@ namespace ICanMakeAClone.ONAF2
 			{
 				inputRegions.Clear();
 
-				inputRegions.Add(new InputRegion(HARDBOILED_OFFSET, HARDBOILED_SIZE, true, (i) => { Main.HasWon = !Main.HasWon; }));
+				inputRegions.Add(new InputRegion(HARDBOILED_OFFSET, HARDBOILED_SIZE, true, (i) => {
+					if (Rand.Next(RARE_SCREEN_RARITY) == 0)
+					{
+						SetStateNextFrame(UIState.RareStartup);
+					}
+					else
+					{
+						SetStateNextFrame(UIState.Office);
+					}
+
+					Main.Level.HardBoiled = true;
+				}));
+
 				inputRegions.Add(new InputRegion(STARTGAME_INPUTBOX, true, (i) => {
 					if (Rand.Next(RARE_SCREEN_RARITY) == 0)
 					{
@@ -172,6 +184,8 @@ namespace ICanMakeAClone.ONAF2
 					{
 						SetStateNextFrame(UIState.Office);
 					}
+
+					Main.Level.HardBoiled = false;
 				}));
 
 				InputRegion volumeInput = new InputRegion(VOLUME_INPUTBOX);
@@ -235,7 +249,14 @@ namespace ICanMakeAClone.ONAF2
 					_doingSpam = true;
 					timer = new HelperTimer(TimeSpan.FromSeconds(SPAM_TIME), "SpamEnd", () => {
 						_doingSpam = false;
-						SetState(UIState.TheEggnd);
+						if (Main.Level.HardBoiled)
+						{
+							SetState(UIState.Newspaper);
+						}
+						else
+						{
+							SetState(UIState.TheEggnd);
+						}
 					});
 				});
 
