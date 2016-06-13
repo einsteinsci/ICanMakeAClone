@@ -1,0 +1,59 @@
+!SpriteSheet
+Id: b776f8f3-d957-4cb9-bef7-5aaa1f0e94a7
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: d58e4c0d-95d2-4077-ab47-06f07e82b2a6
+    AllowRotations: false
+Sprites:
+    -   ~Id: 03b32626-18fe-4b77-9123-701f246a3717
+        Source: ../../../../../../../Downloads/ONAF2_IMG/2.png
+        Name: Cam6_Thinking
+        TextureRegion: {X: 1892, Y: 788, Width: 126, Height: 167}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 03b32626-18fe-4b77-9123-701f246a3717
+        Source: ../../../../../../../Downloads/ONAF2_IMG/6.png
+        Name: Cam6_WavyArms
+        TextureRegion: {X: 1628, Y: 676, Width: 129, Height: 197}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 03b32626-18fe-4b77-9123-701f246a3717
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: Cam3
+        TextureRegion: {X: 1868, Y: 1672, Width: 159, Height: 326}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 03b32626-18fe-4b77-9123-701f246a3717
+        Source: ../../../../../../../Downloads/ONAF2_IMG/6.png
+        Name: Cam7_Chat
+        TextureRegion: {X: 1820, Y: 1184, Width: 98, Height: 202}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 03b32626-18fe-4b77-9123-701f246a3717
+        Source: ../../../../../../../Downloads/ONAF2_IMG/6.png
+        Name: Cam7_KevinJr
+        TextureRegion: {X: 1628, Y: 244, Width: 128, Height: 217}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 03b32626-18fe-4b77-9123-701f246a3717
+        Source: ../../../../../../../Downloads/ONAF2_IMG/5 - Copy.png
+        Name: Cam6_Kazotsky
+        TextureRegion: {X: 1924, Y: 1008, Width: 111, Height: 212}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

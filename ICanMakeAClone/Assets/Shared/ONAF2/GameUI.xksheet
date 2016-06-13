@@ -1,0 +1,123 @@
+!SpriteSheet
+Id: aed2d572-e82a-455a-988f-727ab79dbaee
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: 3bf69191-a416-42bb-9030-ddda682b6589
+    AllowRotations: false
+Sprites:
+    -   ~Id: ad7bf4e8-60e7-40ae-9f79-00e16591e6a0
+        Source: ../../../../../../../Downloads/ONAF2_IMG/1.png
+        Name: Map
+        TextureRegion: {X: 1628, Y: 928, Width: 382, Height: 376}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 8dcac397-ae29-4bdc-8aea-acb1f67f5ea9
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: CamSelectedLight
+        TextureRegion: {X: 1214, Y: 1966, Width: 58, Height: 42}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: a2857c30-f29b-46af-9544-f6fca38f60f9
+        Source: ../../../../../../../Downloads/ONAF2_IMG/2.png
+        Name: CamSelectedDark
+        TextureRegion: {X: 1554, Y: 1882, Width: 58, Height: 42}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: ad7bf4e8-60e7-40ae-9f79-00e16591e6a0
+        Source: ../../../../../../../Downloads/ONAF2_IMG/1.png
+        Name: YouSmall
+        TextureRegion: {X: 1926, Y: 486, Width: 34, Height: 28}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: ad7bf4e8-60e7-40ae-9f79-00e16591e6a0
+        Source: ../../../../../../../Downloads/ONAF2_IMG/1.png
+        Name: YouLarge
+        TextureRegion: {X: 1742, Y: 2010, Width: 34, Height: 30}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: ad7bf4e8-60e7-40ae-9f79-00e16591e6a0
+        Source: ../../../../../../../Downloads/ONAF2_IMG/1.png
+        Name: RedmanWarning
+        TextureRegion: {X: 1972, Y: 1976, Width: 57, Height: 50}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: f3664044-5a48-4ede-887e-5cf4261bec95
+        Source: ../../../../../../../Downloads/ONAF2_IMG/3.png
+        Name: RedmanEXE
+        TextureRegion: {X: 1508, Y: 1692, Width: 450, Height: 260}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: ad7bf4e8-60e7-40ae-9f79-00e16591e6a0
+        Source: ../../../../../../../Downloads/ONAF2_IMG/1.png
+        Name: Battery
+        TextureRegion: {X: 1628, Y: 1648, Width: 180, Height: 36}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 8dcac397-ae29-4bdc-8aea-acb1f67f5ea9
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: Exposure
+        TextureRegion: {X: 1868, Y: 2008, Width: 172, Height: 36}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 8dcac397-ae29-4bdc-8aea-acb1f67f5ea9
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: CamFlipUp
+        TextureRegion: {X: 472, Y: 1968, Width: 500, Height: 45}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: e327972d-3b1c-48c9-9a27-6c53c0a76912
+        Source: ../../ExposureBar.png
+        Name: Bar
+        TextureRegion: {X: 0, Y: 0, Width: 160, Height: 24}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: ffa9dc47-c2a7-470b-bab8-117216fe6e16
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: BarSegment
+        TextureRegion: {X: 2018, Y: 566, Width: 22, Height: 26}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: ffa9dc47-c2a7-470b-bab8-117216fe6e16
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: BatteryRedman
+        TextureRegion: {X: 2020, Y: 600, Width: 23, Height: 23}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 47efe9f7-9372-47d8-92c5-a9617b280dc7
+        Source: ../../../../../../../Downloads/ONAF2_IMG/4.png
+        Name: MuteSongButton
+        TextureRegion: {X: 1628, Y: 1560, Width: 90, Height: 55}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

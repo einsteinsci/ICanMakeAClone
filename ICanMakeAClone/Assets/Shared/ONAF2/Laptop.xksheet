@@ -1,0 +1,43 @@
+!SpriteSheet
+Id: c2b3fb7c-dd63-4303-9798-af4594617202
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: bd95e2fb-922e-4bf1-89e9-7b827fc4b9f8
+    AllowRotations: false
+Sprites:
+    -   ~Id: 177439a8-ba4a-4c8c-a2b0-0396aa018720
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: 1
+        TextureRegion: {X: 2, Y: 1866, Width: 1280, Height: 96}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 177439a8-ba4a-4c8c-a2b0-0396aa018720
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: 2
+        TextureRegion: {X: 2, Y: 1694, Width: 1280, Height: 162}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: d478656e-c255-45b7-8332-c0158ec5e818
+        Source: ../../../../../../../Downloads/ONAF2_IMG/21.png
+        Name: 3
+        TextureRegion: {X: 2, Y: 1578, Width: 1280, Height: 438}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: f6cde8d4-541f-478d-a7e2-410e68a0eb90
+        Source: ../../../../../../../Downloads/ONAF2_IMG/26.png
+        Name: 4
+        TextureRegion: {X: 2, Y: 2, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

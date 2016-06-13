@@ -1,0 +1,19 @@
+!SpriteFont
+Id: eea9eaff-8ebe-412a-8ff4-666b628901c5
+SerializedVersion: {Xenko: 1.5.0-alpha09}
+Tags: []
+Source: 
+FontName: Consolas
+Size: 10.0
+Style: Regular
+IsDynamic: false
+DefaultCharacter: "ÿ"
+CharacterSet: 
+CharacterRegions:
+    -   ~Id: a46702dc-48ee-41ab-8bf9-17796729d645
+        Start: ' '
+        End: "ÿ"
+AntiAlias: Grayscale
+Spacing: 0.0
+LineSpacing: 3.0
+UseKerning: false

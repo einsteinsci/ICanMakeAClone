@@ -1,0 +1,58 @@
+!SpriteSheet
+Id: 6a7f8807-b99d-435c-a7aa-54a83de24e3d
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: c00687a6-8635-4f78-b47f-c1a1566d5dd1
+    AllowRotations: false
+Sprites:
+    -   ~Id: e20e9a8d-5794-4fec-b030-0b7a02c46ee1
+        Source: ../../../../../../../Downloads/ONAF2_IMG/21.png
+        Name: Record
+        TextureRegion: {X: 1288, Y: 732, Width: 754, Height: 664}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: bdc3828d-226b-402a-8327-d2eb3fd54944
+        Source: ../../../../../../../Downloads/ONAF2_IMG/26.png
+        Name: RecordTip
+        TextureRegion: {X: 1080, Y: 1452, Width: 958, Height: 518}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 00397b42-7a3e-4529-9962-2b9a300d2c1e
+        Source: ../../../../../../../Downloads/ONAF2_IMG/16.png
+        Name: RecordSticker
+        TextureRegion: {X: 1410, Y: 4, Width: 584, Height: 584}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: e53f1a8c-dd09-4c2a-9e51-ad720ec1819b
+        Source: ../../../../../../../Downloads/ONAF2_IMG/37.png
+        Name: MenuBase
+        TextureRegion: {X: 0, Y: 1219, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: ff47389b-d2b0-4ce7-9607-9cefe7c9e3db
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: HardBoiledMode
+        TextureRegion: {X: 4, Y: 1968, Width: 460, Height: 50}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: ff47389b-d2b0-4ce7-9607-9cefe7c9e3db
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: Volume
+        TextureRegion: {X: 982, Y: 1968, Width: 224, Height: 40}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

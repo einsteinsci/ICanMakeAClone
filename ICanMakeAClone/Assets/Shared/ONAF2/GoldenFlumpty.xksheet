@@ -1,0 +1,42 @@
+!SpriteSheet
+Id: 66a6a0cf-65e8-403f-b304-349421e4a8b8
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: 235d7b4b-feb5-486e-ace9-51d8895f2c8b
+    AllowRotations: false
+Sprites:
+    -   ~Id: 6f08a2d8-8fdb-4fc0-ba3c-68226b1da573
+        Source: ../../../../../../../Downloads/ONAF2_IMG/16.png
+        Name: Office0
+        TextureRegion: {X: 1406, Y: 850, Width: 481, Height: 571}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 6f08a2d8-8fdb-4fc0-ba3c-68226b1da573
+        Source: ../../../../../../../Downloads/ONAF2_IMG/14.png
+        Name: Office1
+        TextureRegion: {X: 1482, Y: 790, Width: 481, Height: 610}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 6f08a2d8-8fdb-4fc0-ba3c-68226b1da573
+        Source: ../../../../../../../Downloads/ONAF2_IMG/14.png
+        Name: Office2
+        TextureRegion: {X: 1482, Y: 1406, Width: 481, Height: 602}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 6f08a2d8-8fdb-4fc0-ba3c-68226b1da573
+        Source: ../../../../../../../Downloads/ONAF2_IMG/16.png
+        Name: Jumpscare
+        TextureRegion: {X: 4, Y: 4, Width: 1400, Height: 840}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

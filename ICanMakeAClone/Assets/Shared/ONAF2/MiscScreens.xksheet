@@ -1,0 +1,163 @@
+!SpriteSheet
+Id: e0d3b267-fee5-4028-abae-9cceed3dbeec
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: 77f827ef-5fd1-4589-b671-644265f8c4b7
+    AllowRotations: false
+Sprites:
+    -   ~Id: eb72ffdd-1ac4-449f-bd10-c2cd47ef71d5
+        Source: ../../YouDied.png
+        Name: YouDied
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 92465c38-561b-40aa-b70d-dcb45544ca2d
+        Source: ../../../../../../../Downloads/ONAF2_IMG/29.png
+        Name: Static
+        TextureRegion: {X: 4, Y: 4, Width: 1280, Height: 1448}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 93a88b31-88dd-4efe-b3c0-17e29e388ac9
+        Source: ../../../../../../../Downloads/ONAF2_IMG/30.png
+        Name: RedScreenOfDeath
+        TextureRegion: {X: 4, Y: 4, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 64eedad0-f999-44ca-ae2b-a4aceb4d3e05
+        Source: ../../../../../../../Downloads/ONAF2_IMG/31.png
+        Name: SixAM
+        TextureRegion: {X: 4, Y: 4, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 8195c856-f2ce-4b9f-99e5-202639a63f20
+        Source: ../../../../../../../Downloads/ONAF2_IMG/1.png
+        Name: Spam
+        TextureRegion: {X: 1996, Y: 772, Width: 45, Height: 75}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: f33cd47f-ba8a-4356-992d-925841530f73
+        Source: ../../../../../../../Downloads/ONAF2_IMG/28.png
+        Name: EggOS
+        TextureRegion: {X: 4, Y: 728, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 60c5c6bc-cc1d-438a-8381-3fdf40af3cf4
+        Source: ../../RebootBar.png
+        Name: RebootBar
+        TextureRegion: {X: 0, Y: 0, Width: 316, Height: 26}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 652f7510-45de-4416-8b03-de16d60b6b17
+        Source: ../../../../../../../Downloads/ONAF2_IMG/34.png
+        Name: Camera
+        TextureRegion: {X: 4, Y: 4, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: e21c5e2f-3727-42b0-9ff1-8c98c2a82181
+        Source: ../../../../../../../Downloads/ONAF2_IMG/32.png
+        Name: RareStartup1
+        TextureRegion: {X: 4, Y: 4, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: e21c5e2f-3727-42b0-9ff1-8c98c2a82181
+        Source: ../../../../../../../Downloads/ONAF2_IMG/32.png
+        Name: RareStartup2
+        TextureRegion: {X: 4, Y: 732, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: e21c5e2f-3727-42b0-9ff1-8c98c2a82181
+        Source: ../../../../../../../Downloads/ONAF2_IMG/33.png
+        Name: RareStartup3
+        TextureRegion: {X: 4, Y: 4, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: e21c5e2f-3727-42b0-9ff1-8c98c2a82181
+        Source: ../../../../../../../Downloads/ONAF2_IMG/33.png
+        Name: Newspaper
+        TextureRegion: {X: 4, Y: 732, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 756db437-72a8-41ab-9105-36dbe4ea11b6
+        Source: ../../../../../../../Downloads/ONAF2_IMG/26.png
+        Name: TheEggnd0
+        TextureRegion: {X: 2, Y: 726, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 756db437-72a8-41ab-9105-36dbe4ea11b6
+        Source: ../../../../../../../Downloads/ONAF2_IMG/27.png
+        Name: TheEggnd1
+        TextureRegion: {X: 2, Y: 2, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 756db437-72a8-41ab-9105-36dbe4ea11b6
+        Source: ../../../../../../../Downloads/ONAF2_IMG/27.png
+        Name: TheEggnd2
+        TextureRegion: {X: 2, Y: 726, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 756db437-72a8-41ab-9105-36dbe4ea11b6
+        Source: ../../../../../../../Downloads/ONAF2_IMG/28.png
+        Name: TheEggnd3
+        TextureRegion: {X: 2, Y: 2, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 127ec432-b0f3-42b1-9a29-be885c0645f0
+        Source: ../../ChillBar.png
+        Name: ChillBar
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 45}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 77186a47-ace6-4e9e-8671-93d4ff0088bd
+        Source: ../../ChillBarSmall.png
+        Name: ChillBarSmall
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 20}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 84b71cd0-5e0b-4d5a-85c8-02ffb81b3bb0
+        Source: ../../../../../../../Downloads/ONAF2_IMG/30.png
+        Name: LaptopVignette
+        TextureRegion: {X: 4, Y: 732, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

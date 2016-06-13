@@ -1,0 +1,10 @@
+!SoundEffect
+Id: 8baa24b1-8364-4f1f-9c86-827d616c9dd0
+Tags: []
+Source: ../../../../../../../../Downloads/ONAF2_IMG/Sounds/LightOff.wav
+~Base:
+    Location: --import--
+    Asset: !SoundEffect
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 634842fa-d1db-45c2-b13d-bc11486dae4d

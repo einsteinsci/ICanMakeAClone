@@ -1,0 +1,59 @@
+!SpriteSheet
+Id: 56caebaa-0670-4977-a4be-bbf23f6cf2c7
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: a0f77103-fd39-41bc-b58b-0f31ae0e30b2
+    AllowRotations: false
+Sprites:
+    -   ~Id: b65ffd95-217e-4254-b813-791dbc20b134
+        Source: ../../../../../../../Downloads/ONAF2_IMG/5.png
+        Name: Cam1
+        TextureRegion: {X: 1124, Y: 1692, Width: 285, Height: 173}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: b65ffd95-217e-4254-b813-791dbc20b134
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: Cam2
+        TextureRegion: {X: 1628, Y: 1028, Width: 380, Height: 407}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: b65ffd95-217e-4254-b813-791dbc20b134
+        Source: ../../../../../../../Downloads/ONAF2_IMG/12.png
+        Name: Cam3_Start
+        TextureRegion: {X: 1564, Y: 828, Width: 427, Height: 399}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: b65ffd95-217e-4254-b813-791dbc20b134
+        Source: ../../../../../../../Downloads/ONAF2_IMG/18.png
+        Name: Cam3_UpCloseAndPersonal
+        TextureRegion: {X: 1364, Y: 4, Width: 659, Height: 530}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: b65ffd95-217e-4254-b813-791dbc20b134
+        Source: ../../../../../../../Downloads/ONAF2_IMG/12.png
+        Name: Cam6
+        TextureRegion: {X: 564, Y: 1672, Width: 494, Height: 370}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: b65ffd95-217e-4254-b813-791dbc20b134
+        Source: ../../../../../../../Downloads/ONAF2_IMG/3.png
+        Name: Cam7
+        TextureRegion: {X: 1628, Y: 4, Width: 282, Height: 346}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

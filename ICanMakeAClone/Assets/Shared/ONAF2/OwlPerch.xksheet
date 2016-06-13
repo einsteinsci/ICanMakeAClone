@@ -1,0 +1,27 @@
+!SpriteSheet
+Id: d89422da-6def-4d07-b866-1b7e3958f770
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: 04f7f5f4-3cb6-40d5-8d47-704b43a363ff
+    AllowRotations: false
+Sprites:
+    -   ~Id: 59b7f116-f732-4b3e-a652-ec7379bd7dc9
+        Source: ../../../../../../../Downloads/ONAF2_IMG/1.png
+        Name: Sleeping
+        TextureRegion: {X: 1928, Y: 316, Width: 79, Height: 160}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 59b7f116-f732-4b3e-a652-ec7379bd7dc9
+        Source: ../../../../../../../Downloads/ONAF2_IMG/5.png
+        Name: Glaring
+        TextureRegion: {X: 1124, Y: 1876, Width: 79, Height: 160}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

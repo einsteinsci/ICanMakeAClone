@@ -1,0 +1,10 @@
+!SoundEffect
+Id: 56dc067f-4725-4d93-bd65-138e31c71c8e
+Tags: []
+Source: ../../../../../../../../Downloads/ONAF2_IMG/Sounds/Static.wav
+~Base:
+    Location: --import--
+    Asset: !SoundEffect
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 634842fa-d1db-45c2-b13d-bc11486dae4d

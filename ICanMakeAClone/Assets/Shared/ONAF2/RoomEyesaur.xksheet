@@ -1,0 +1,51 @@
+!SpriteSheet
+Id: 852aeae0-fdc4-4652-b8be-c86b45ca1409
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: ea54fee5-8b68-4fc9-b521-a4e0097dab02
+    AllowRotations: false
+Sprites:
+    -   ~Id: d53b99f7-0a50-4925-99da-fb22c04c55ab
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: Cam1_Waiting
+        TextureRegion: {X: 1630, Y: 1445, Width: 376, Height: 218}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: d53b99f7-0a50-4925-99da-fb22c04c55ab
+        Source: ../../../../../../../Downloads/ONAF2_IMG/1.png
+        Name: Cam1_Emerging
+        TextureRegion: {X: 1630, Y: 1312, Width: 376, Height: 327}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: cd191c75-219f-48a3-9057-566ed2b6ada3
+        Source: ../../../../../../../Downloads/ONAF2_IMG/3.png
+        Name: Cam1_Missing
+        TextureRegion: {X: 1628, Y: 360, Width: 378, Height: 219}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: d53b99f7-0a50-4925-99da-fb22c04c55ab
+        Source: ../../../../../../../Downloads/ONAF2_IMG/1.png
+        Name: Cam3
+        TextureRegion: {X: 1848, Y: 1648, Width: 176, Height: 318}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: d53b99f7-0a50-4925-99da-fb22c04c55ab
+        Source: ../../../../../../../Downloads/ONAF2_IMG/14.png
+        Name: Cam6
+        TextureRegion: {X: 676, Y: 1634, Width: 660, Height: 377}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

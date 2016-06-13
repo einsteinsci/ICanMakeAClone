@@ -1,0 +1,10 @@
+!SoundMusic
+Id: 529d2b4b-5ada-4d3e-9591-e8595346ef2f
+Tags: []
+Source: ../../../../../../../../Downloads/ONAF2_IMG/Sounds/MusicSPAM.mp3
+~Base:
+    Location: --import--
+    Asset: !SoundMusic
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 5adcb5b0-7011-4d28-9741-23ec7c3df617

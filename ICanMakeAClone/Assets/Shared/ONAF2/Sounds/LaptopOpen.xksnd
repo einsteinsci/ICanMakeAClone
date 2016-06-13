@@ -1,0 +1,10 @@
+!SoundEffect
+Id: 84cd6f04-8149-4b86-a907-79d38d9d60b7
+Tags: []
+Source: ../../../../../../../../Downloads/ONAF2_IMG/Sounds/LabtopOpen.wav
+~Base:
+    Location: --import--
+    Asset: !SoundEffect
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 634842fa-d1db-45c2-b13d-bc11486dae4d

@@ -1,0 +1,19 @@
+!SpriteFont
+Id: 321ca3fe-4fb2-49be-b993-934cf5ffbf26
+SerializedVersion: {Xenko: 1.5.0-alpha09}
+Tags: []
+Source: 
+FontName: Gadugi
+Size: 14.0
+Style: Bold
+IsDynamic: false
+DefaultCharacter: ' '
+CharacterSet: 
+CharacterRegions:
+    -   ~Id: d0f0feb5-06c5-4e95-8b04-7b9964d8dcda
+        Start: ' '
+        End: "\x7F"
+AntiAlias: Grayscale
+Spacing: 0.0
+LineSpacing: 0.0
+UseKerning: false

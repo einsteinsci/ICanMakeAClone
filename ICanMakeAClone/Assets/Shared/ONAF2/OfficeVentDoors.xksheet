@@ -1,0 +1,59 @@
+!SpriteSheet
+Id: 2206fbc1-0be2-426e-bfc1-a1af54e40fdc
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: 722d6f4d-4d6a-427d-8c44-60281882fcd4
+    AllowRotations: false
+Sprites:
+    -   ~Id: 0785e517-9510-446a-83dc-ea7ecff5ecb4
+        Source: ../../../../../../../Downloads/ONAF2_IMG/1.png
+        Name: 0
+        TextureRegion: {X: 562, Y: 1690, Width: 814, Height: 187}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: ca0a8099-039e-4700-aec0-1cc30fadd4e0
+        Source: ../../../../../../../Downloads/ONAF2_IMG/2.png
+        Name: 1
+        TextureRegion: {X: 822, Y: 1690, Width: 782, Height: 187}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 0a588f0b-7e79-4dd0-809c-af6329debbb4
+        Source: ../../../../../../../Downloads/ONAF2_IMG/3.png
+        Name: 2
+        TextureRegion: {X: 791, Y: 1690, Width: 708, Height: 187}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 75715804-5aae-44a4-8a8a-e187d817f4be
+        Source: ../../../../../../../Downloads/ONAF2_IMG/4.png
+        Name: 3
+        TextureRegion: {X: 2, Y: 1690, Width: 708, Height: 187}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 770bca41-1402-4995-9410-c9a27001b1a8
+        Source: ../../../../../../../Downloads/ONAF2_IMG/3.png
+        Name: 4
+        TextureRegion: {X: 2, Y: 1690, Width: 782, Height: 187}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 9b38a200-258f-49d3-a0ba-102414f469af
+        Source: ../../../../../../../Downloads/ONAF2_IMG/2.png
+        Name: 5
+        TextureRegion: {X: 2, Y: 1690, Width: 814, Height: 187}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

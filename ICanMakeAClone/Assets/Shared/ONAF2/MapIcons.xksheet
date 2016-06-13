@@ -1,0 +1,53 @@
+!SpriteSheet
+Id: f88d70bf-37ff-4cc5-b43b-9073578ebfa7
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: b90917ee-2dea-4580-a4dd-0609d98a5537
+    AllowRotations: false
+Sprites:
+    -   ~Id: 7a4c1117-98bf-4388-bca9-451aa3341bd9
+        Source: ../../MapIcons.png
+        Name: GoldenFlumpty
+        TextureRegion: {X: 0, Y: 0, Width: 32, Height: 36}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 7a4c1117-98bf-4388-bca9-451aa3341bd9
+        Source: ../../MapIcons.png
+        Name: BBB
+        TextureRegion: {X: 32, Y: 4, Width: 24, Height: 32}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 7a4c1117-98bf-4388-bca9-451aa3341bd9
+        Source: ../../MapIcons.png
+        Name: Flumpty
+        TextureRegion: {X: 56, Y: 2, Width: 36, Height: 34}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 7a4c1117-98bf-4388-bca9-451aa3341bd9
+        Source: ../../MapIcons.png
+        Name: Eyesaur
+        TextureRegion: {X: 92, Y: 0, Width: 50, Height: 36}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 7a4c1117-98bf-4388-bca9-451aa3341bd9
+        Source: ../../MapIcons.png
+        Name: Owl
+        TextureRegion: {X: 142, Y: 16, Width: 18, Height: 20}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 7a4c1117-98bf-4388-bca9-451aa3341bd9
+        Source: ../../MapIcons.png
+        Name: Grunkfuss
+        TextureRegion: {X: 160, Y: 6, Width: 26, Height: 28}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

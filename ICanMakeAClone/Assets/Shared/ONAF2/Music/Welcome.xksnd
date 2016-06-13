@@ -1,0 +1,10 @@
+!SoundMusic
+Id: 615093c3-4d3c-4e7c-856a-3be20a421bf0
+Tags: []
+Source: ../../../../../../../../Downloads/ONAF2_IMG/Sounds/MusicWelcome.mp3
+~Base:
+    Location: --import--
+    Asset: !SoundMusic
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 5adcb5b0-7011-4d28-9741-23ec7c3df617

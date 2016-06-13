@@ -1,0 +1,112 @@
+!Package
+Id: 8fb72e55-3fc6-49bf-8861-6b2b5dad4cb9
+SerializedVersion: {Assets: 0.0.2}
+Tags: []
+Meta:
+    Name: ICanMakeAClone
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: ICanMakeAClone
+    Dependencies:
+        -   Name: Xenko
+            Version: 1.6.6-beta
+            RootAssets: []
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+            -   Path: ICanMakeAClone.Game/Effects
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: 628913b5-8040-4909-9ac9-d16e3744c75c
+                Location: ICanMakeAClone.Game/ICanMakeAClone.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: c9d6ce16-1012-4764-a688-620fbf5c77e3
+                Location: ICanMakeAClone.Windows/ICanMakeAClone.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets:
+    - 019000f6-338e-4c9b-9fde-620fb485d88c:ONAF2/Sounds/Spotted2
+    - 0f178f5a-23a2-47a2-b0b6-28be966d4b12:ONAF2/RoomGrunkfuss
+    - 0f9c800c-17b7-438a-93a9-28b8d22fd891:ONAF2/OwlVent
+    - 11051fc7-ac31-4f2f-b961-4654c243cb82:ONAF2/Sounds/EyesaurScream
+    - 1524b64d-2821-4c7c-8e86-bb97a8b60337:ONAF2/Sounds/RedmanPopUp
+    - 1af25a43-b036-4f03-9e30-6290a02c6994:ONAF2/Music/Classical-ish
+    - 1f175f6a-0722-481e-8b08-870f5ddc6a02:ONAF2/Sounds/Spotted1
+    - 2206fbc1-0be2-426e-bfc1-a1af54e40fdc:ONAF2/OfficeVentDoors
+    - 321ca3fe-4fb2-49be-b993-934cf5ffbf26:GameFontMed
+    - 3565d784-9ead-406f-845c-16e6dd096f43:ONAF2/StaticBars
+    - 37a3e13e-ec0e-4d25-a9e3-045a2df93b90:ONAF2/Sounds/LaptopShutdown
+    - 384dfc9f-d28f-4e3f-9c22-ae5910728fce:ONAF2/Cameras
+    - 3fa5d4c4-b232-4148-9ef1-444efad5d360:ONAF2/JumpscareEyesaur
+    - 449d3ffc-89cc-4dd6-b8ac-ac62eddef579:ONAF2/Sounds/OwlHitVent2
+    - 4cd6a3e2-b2eb-400b-bbff-39feb4210d83:ONAF2/Music/Credits
+    - 5162a3aa-37a9-45c0-8ff2-350c895e1df7:ONAF2/Music/Credits2
+    - 529d2b4b-5ada-4d3e-9591-e8595346ef2f:ONAF2/Music/SPAM
+    - 55a67506-5056-4122-8e25-0ea6dc86f17c:ONAF2/SpookGrunkfuss
+    - 56caebaa-0670-4977-a4be-bbf23f6cf2c7:ONAF2/RoomFlumpty
+    - 56dc067f-4725-4d93-bd65-138e31c71c8e:ONAF2/Sounds/Static
+    - 5ba861b0-56b2-4a38-b2eb-d9a9a4af5afc:ONAF2/Sounds/Spotted3
+    - 5d488a9d-6573-4951-8c3b-c5af46496193:ONAF2/Sounds/Swap_Vents
+    - 5dcd391a-c520-4845-afdf-8adc620b7436:GameFontLarge
+    - 5e632c25-0487-4c24-98e5-eb9bebbf1d86:ONAF2/LaptopPowerDown
+    - 615093c3-4d3c-4e7c-856a-3be20a421bf0:ONAF2/Music/Welcome
+    - 66a6a0cf-65e8-403f-b304-349421e4a8b8:ONAF2/GoldenFlumpty
+    - 6a7f8807-b99d-435c-a7aa-54a83de24e3d:ONAF2/Menu
+    - 6b66c852-2292-4b28-b086-4374d051a1e6:ONAF2/Sounds/OwlScream
+    - 6ec9db89-c952-48d4-bb59-043df92d9121:ONAF2/JumpscareGrunkfuss
+    - 7005e32f-7f35-440b-bd4e-d5d8b9d3c4ae:ONAF2/SpookFlumpty
+    - 72ef94ed-4a9f-4dca-bb3f-afa35c3d4e62:ONAF2/Sounds/GoldenFlumptyDetect
+    - 80bdc7cd-dd67-4bde-b438-e1db109b9a39:ONAF2/RetroFontSmall
+    - 84cd6f04-8149-4b86-a907-79d38d9d60b7:ONAF2/Sounds/LaptopOpen
+    - 852aeae0-fdc4-4652-b8be-c86b45ca1409:ONAF2/RoomEyesaur
+    - 875c41aa-e425-4a18-9f70-5dde8fd77ec1:ONAF2/Sounds/LaptopAmbient
+    - 87dd2511-12a4-4f5e-b5ca-b144dfc6081d:ONAF2/Office
+    - 8895a992-a0db-4798-a341-767bd3f61e71:ONAF2/JumpscareRedman
+    - 8baa24b1-8364-4f1f-9c86-827d616c9dd0:ONAF2/Sounds/LightOff
+    - 8f81b339-9868-4c7d-9644-7e6b254f64ab:ONAF2/Sounds/ClownHoleAppear
+    - 91c30bdd-8d8b-47a3-b92d-a0ffd87225c2:ONAF2/JumpscareOwl
+    - 94d1898b-6ff0-4b65-9b6f-e2e87518c5d0:ONAF2/Sounds/RedmanCrash
+    - a27020da-32e1-4eae-b9e1-02aa99a17090:ONAF2/JumpscareBBB
+    - a36f772e-3df6-4d48-bdf0-2066554aa28f:ONAF2/Sounds/LaptopClose
+    - a64378a6-e99d-468c-b1cd-8180a7b9be79:ONAF2/Sounds/GenericScream
+    - addac230-76b2-4bdd-ac07-266e8b38bb1c:ONAF2/Sounds/AwarenessIncrease
+    - aed2d572-e82a-455a-988f-727ab79dbaee:ONAF2/GameUI
+    - b59fd000-1406-4ba4-b77d-7b1d67210222:ONAF2/Sounds/ClownScream
+    - b776f8f3-d957-4cb9-bef7-5aaa1f0e94a7:ONAF2/RoomBBB
+    - b7c09551-63bb-4140-8b7a-3ca6dbaf1c9c:Map
+    - c0620644-9b86-4cb8-9442-b72769889b1e:ONAF2/Sounds/RedmanScream
+    - c2b3fb7c-dd63-4303-9798-af4594617202:ONAF2/Laptop
+    - d2ab2cff-c84a-4844-b8ac-76949a502ec1:ONAF2/Sounds/Spotted4
+    - d2caae5d-657f-488b-906e-00e3ae95f12e:ONAF2/Sounds/AttackMusic
+    - d59c4f0d-3042-4d67-a819-c4c013a813a9:ONAF2/Sounds/Rawr
+    - d6c8c311-ab65-4f1e-a05d-4ac0f0aeec41:ONAF2/SpookBBB
+    - d89422da-6def-4d07-b866-1b7e3958f770:ONAF2/OwlPerch
+    - e0d3b267-fee5-4028-abae-9cceed3dbeec:ONAF2/MiscScreens
+    - e459ace2-63c5-4c6a-a217-84aae84fa8aa:ONAF2/Sounds/GoldenFlumptyScream
+    - e62a5ba0-dd53-4c3a-9498-e8bbab1bcaaf:ONAF2/Sounds/LightOn
+    - e6a0fd2a-7e97-421d-ad3e-9157dc563641:GameFontXL
+    - e7616b7e-42c0-4cb3-aab2-bf217f67b6cf:ONAF2/Music/MainMenu
+    - e83ad770-8624-420e-9930-5cce847094fa:ONAF2/Music/Toreador
+    - ee04054d-fd9c-4122-8e21-0b347223ec3d:ONAF2/Sounds/OwlHitVent1
+    - eea9eaff-8ebe-412a-8ff4-666b628901c5:DebugFont
+    - f6518971-8e77-4719-9f21-3e8179c94be5:ONAF2/OfficeRecord
+    - f888ef97-afac-436e-9679-98c71a93bee8:ONAF2/Sounds/LaptopSwitchCam
+    - f88d70bf-37ff-4cc5-b43b-9073578ebfa7:ONAF2/MapIcons
+    - fa8a0c13-088f-4b38-abc4-8c7f69f24344:ONAF2/SpookEyesaur
+    - fbf6313b-4e37-40e5-b417-1079ba39b8a5:ONAF2/JumpscareFlumpty

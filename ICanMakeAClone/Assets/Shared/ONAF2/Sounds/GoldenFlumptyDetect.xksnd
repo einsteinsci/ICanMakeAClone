@@ -1,0 +1,10 @@
+!SoundEffect
+Id: 72ef94ed-4a9f-4dca-bb3f-afa35c3d4e62
+Tags: []
+Source: ../../../../../../../../Downloads/ONAF2_IMG/Sounds/GoldenFlumptyDetect.wav
+~Base:
+    Location: --import--
+    Asset: !SoundEffect
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 634842fa-d1db-45c2-b13d-bc11486dae4d

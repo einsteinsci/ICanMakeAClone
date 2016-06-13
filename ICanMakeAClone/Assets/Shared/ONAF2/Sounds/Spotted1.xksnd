@@ -1,0 +1,10 @@
+!SoundEffect
+Id: 1f175f6a-0722-481e-8b08-870f5ddc6a02
+Tags: []
+Source: ../../../../../../../../Downloads/ONAF2_IMG/Sounds/Spotted1.wav
+~Base:
+    Location: --import--
+    Asset: !SoundEffect
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 634842fa-d1db-45c2-b13d-bc11486dae4d

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{628913B5-8040-4909-9AC9-D16E3744C75C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ICanMakeAClone</RootNamespace>
+    <AssemblyName>ICanMakeAClone.Game</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile151</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\ICanMakeAClone.xkpkg</SiliconStudioCurrentPackagePath>
+    <SiliconStudioPackageProps>$([System.IO.Path]::ChangeExtension('$(SiliconStudioCurrentPackagePath)', '.props'))</SiliconStudioPackageProps>
+    <SiliconStudioProjectType>Library</SiliconStudioProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;SILICONSTUDIO_PLATFORM_WINDOWS;SILICONSTUDIO_PLATFORM_WINDOWS_DESKTOP</DefineConstants>
+    <SiliconStudioPlatform>Windows</SiliconStudioPlatform>
+    <SiliconStudioBuildProfile>Windows</SiliconStudioBuildProfile>
+    <OutputPath>..\Bin\Windows\Debug\</OutputPath>
+    <IntermediateOutputPath>obj\Windows\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_WINDOWS;SILICONSTUDIO_PLATFORM_WINDOWS_DESKTOP</DefineConstants>
+    <SiliconStudioPlatform>Windows</SiliconStudioPlatform>
+    <SiliconStudioBuildProfile>Windows</SiliconStudioBuildProfile>
+    <OutputPath>..\Bin\Windows\Release\</OutputPath>
+    <IntermediateOutputPath>obj\Windows\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Testing|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_WINDOWS;SILICONSTUDIO_PLATFORM_WINDOWS_DESKTOP</DefineConstants>
+    <SiliconStudioPlatform>Windows</SiliconStudioPlatform>
+    <SiliconStudioBuildProfile>Windows</SiliconStudioBuildProfile>
+    <OutputPath>..\Bin\Windows\Testing\</OutputPath>
+    <IntermediateOutputPath>obj\Windows\Testing\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_WINDOWS;SILICONSTUDIO_PLATFORM_WINDOWS_DESKTOP</DefineConstants>
+    <SiliconStudioPlatform>Windows</SiliconStudioPlatform>
+    <SiliconStudioBuildProfile>Windows</SiliconStudioBuildProfile>
+    <OutputPath>..\Bin\Windows\AppStore\</OutputPath>
+    <IntermediateOutputPath>obj\Windows\AppStore\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CameraOffsetState.cs" />
+    <Compile Include="HelperTimer.cs" />
+    <Compile Include="InputRegion.cs" />
+    <Compile Include="ONAF2\BirthdayBoyBlam.cs" />
+    <Compile Include="ONAF2\Laptop.cs" />
+    <Compile Include="CloneGame.cs" />
+    <Compile Include="IRetroComponent.cs" />
+    <Compile Include="ONAF2\Eyesaur.cs" />
+    <Compile Include="ONAF2\Flumpty.cs" />
+    <Compile Include="ONAF2\GoldenFlumpty.cs" />
+    <Compile Include="ONAF2\Grunkfuss.cs" />
+    <Compile Include="ONAF2\Level.cs" />
+    <Compile Include="ONAF2\MonsterBase.cs" />
+    <Compile Include="ONAF2\MonsterManager.cs" />
+    <Compile Include="ONAF2\Office.cs" />
+    <Compile Include="ONAF2\OnafMain.cs" />
+    <Compile Include="ONAF2\Owl.cs" />
+    <Compile Include="ONAF2\Redman.cs" />
+    <Compile Include="ONAF2\SavedGame.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Script_UIHandler.cs" />
+    <Compile Include="SoundVolumeController.cs" />
+    <Compile Include="SpriteAnimation.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="ONAF2\UIScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Silicon Studio\Xenko\GamePackages\Xenko.1.6.6-beta\Bin\Windows-Direct3D11\SharpDX.Direct3D11.dll</HintPath>
+    </Reference>
+    <Reference Include="UltimateUtil, Version=1.1.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\UltimateUtil.1.1.0.6\lib\UltimateUtil.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SiliconStudioPackageProps)" Condition="Exists('$(SiliconStudioPackageProps)')" />
+  <Import Project="$(SiliconStudioXenkoDir)\Targets\SiliconStudio.Common.targets" Condition="Exists('$(SiliconStudioXenkoDir)\Targets\SiliconStudio.Common.targets')" />
+  <Target Name="EnsureSiliconStudioXenkoInstalled" BeforeTargets="PrepareForBuild">
+    <Error Condition="'$(SiliconStudioXenkoDir)' == ''" Text="Xenko SDK was not found. Check Xenko is installed and the global env variable [SiliconStudioXenkoDir] is setup correctly" />
+    <Error Condition="!Exists('$(SiliconStudioXenkoDir)\Targets\SiliconStudio.Common.targets')" Text="Invalid Xenko SDK installation. Target file [$(SiliconStudioXenkoDir)\Targets\SiliconStudio.Common.targets] was not found." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+    Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

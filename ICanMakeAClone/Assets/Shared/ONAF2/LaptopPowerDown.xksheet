@@ -1,0 +1,51 @@
+!SpriteSheet
+Id: 5e632c25-0487-4c24-98e5-eb9bebbf1d86
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: 44f5933e-6cb2-481a-b682-1ab7422f13bd
+    AllowRotations: false
+Sprites:
+    -   ~Id: c6a7f2d1-bb8c-4687-a77f-621f361fd70f
+        Source: ../../PowerDown0.png
+        Name: 0
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c6a7f2d1-bb8c-4687-a77f-621f361fd70f
+        Source: ../../PowerDown1.png
+        Name: 1
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c6a7f2d1-bb8c-4687-a77f-621f361fd70f
+        Source: ../../PowerDown2.png
+        Name: 2
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c6a7f2d1-bb8c-4687-a77f-621f361fd70f
+        Source: ../../PowerDown3.png
+        Name: 3
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c6a7f2d1-bb8c-4687-a77f-621f361fd70f
+        Source: ../../PowerDown4.png
+        Name: 4
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

@@ -1,0 +1,10 @@
+!SoundEffect
+Id: 8f81b339-9868-4c7d-9644-7e6b254f64ab
+Tags: []
+Source: ../../../../../../../../Downloads/ONAF2_IMG/Sounds/ClownHoleAppear.wav
+~Base:
+    Location: --import--
+    Asset: !SoundEffect
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 634842fa-d1db-45c2-b13d-bc11486dae4d

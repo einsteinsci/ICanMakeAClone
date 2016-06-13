@@ -1,0 +1,99 @@
+!SpriteSheet
+Id: 6ec9db89-c952-48d4-bb59-043df92d9121
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: 99e83bfd-6c87-45f8-b008-f22ebd2552ca
+    AllowRotations: false
+Sprites:
+    -   ~Id: 02aa4572-34dc-494d-8e8c-cc2bb11c1bcf
+        Source: ../../../../../../../Downloads/ONAF2_IMG/0.png
+        Name: 0
+        TextureRegion: {X: 1626, Y: 2, Width: 386, Height: 528}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 02aa4572-34dc-494d-8e8c-cc2bb11c1bcf
+        Source: ../../../../../../../Downloads/ONAF2_IMG/15.png
+        Name: 0
+        TextureRegion: {X: 1442, Y: 846, Width: 588, Height: 765}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 02aa4572-34dc-494d-8e8c-cc2bb11c1bcf
+        Source: ../../../../../../../Downloads/ONAF2_IMG/22.png
+        Name: 0
+        TextureRegion: {X: 1206, Y: 846, Width: 824, Height: 809}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 02aa4572-34dc-494d-8e8c-cc2bb11c1bcf
+        Source: ../../../../../../../Downloads/ONAF2_IMG/35.png
+        Name: 0
+        TextureRegion: {X: 2, Y: 2, Width: 1054, Height: 840}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 02aa4572-34dc-494d-8e8c-cc2bb11c1bcf
+        Source: ../../../../../../../Downloads/ONAF2_IMG/20.png
+        Name: 0
+        TextureRegion: {X: 2, Y: 2, Width: 1311, Height: 840}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 02aa4572-34dc-494d-8e8c-cc2bb11c1bcf
+        Source: ../../../../../../../Downloads/ONAF2_IMG/18.png
+        Name: 0
+        TextureRegion: {X: 2, Y: 2, Width: 1353, Height: 840}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 02aa4572-34dc-494d-8e8c-cc2bb11c1bcf
+        Source: ../../../../../../../Downloads/ONAF2_IMG/15.png
+        Name: 0
+        TextureRegion: {X: 2, Y: 846, Width: 1433, Height: 840}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 02aa4572-34dc-494d-8e8c-cc2bb11c1bcf
+        Source: ../../../../../../../Downloads/ONAF2_IMG/13.png
+        Name: 0
+        TextureRegion: {X: 2, Y: 846, Width: 1549, Height: 840}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 02aa4572-34dc-494d-8e8c-cc2bb11c1bcf
+        Source: ../../../../../../../Downloads/ONAF2_IMG/9.png
+        Name: 0
+        TextureRegion: {X: 2, Y: 846, Width: 1620, Height: 840}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 02aa4572-34dc-494d-8e8c-cc2bb11c1bcf
+        Source: ../../../../../../../Downloads/ONAF2_IMG/10.png
+        Name: 0
+        TextureRegion: {X: 2, Y: 2, Width: 1620, Height: 840}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 02aa4572-34dc-494d-8e8c-cc2bb11c1bcf
+        Source: ../../../../../../../Downloads/ONAF2_IMG/10.png
+        Name: 0
+        TextureRegion: {X: 2, Y: 846, Width: 1620, Height: 840}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

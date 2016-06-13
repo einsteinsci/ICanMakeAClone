@@ -1,0 +1,19 @@
+!SpriteFont
+Id: 80bdc7cd-dd67-4bde-b438-e1db109b9a39
+SerializedVersion: {Xenko: 1.5.0-alpha09}
+Tags: []
+Source: 
+FontName: Silkscreen
+Size: 14.0
+Style: Regular
+IsDynamic: false
+DefaultCharacter: ' '
+CharacterSet: 
+CharacterRegions:
+    -   ~Id: 38425747-0385-4ee2-84e4-ed845116483d
+        Start: ' '
+        End: "\x7F"
+AntiAlias: Grayscale
+Spacing: 0.0
+LineSpacing: 0.0
+UseKerning: false

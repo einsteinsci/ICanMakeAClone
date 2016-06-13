@@ -1,0 +1,156 @@
+!SpriteSheet
+Id: 0f9c800c-17b7-438a-93a9-28b8d22fd891
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: e77c16c1-d776-4bf0-b574-49ce648d0260
+    AllowRotations: false
+Sprites:
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/3.png
+        Name: 0
+        TextureRegion: {X: 1930, Y: 1966, Width: 84, Height: 55}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/1.png
+        Name: 1
+        TextureRegion: {X: 1852, Y: 1974, Width: 103, Height: 66}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/3.png
+        Name: 2
+        TextureRegion: {X: 352, Y: 1882, Width: 117, Height: 77}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/2.png
+        Name: 3
+        TextureRegion: {X: 1782, Y: 1942, Width: 113, Height: 93}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/2.png
+        Name: 4
+        TextureRegion: {X: 1387, Y: 1882, Width: 134, Height: 109}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/2.png
+        Name: 5
+        TextureRegion: {X: 989, Y: 1872, Width: 167, Height: 129}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/2.png
+        Name: 6
+        TextureRegion: {X: 15, Y: 1882, Width: 202, Height: 135}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/5.png
+        Name: 7
+        TextureRegion: {X: 1628, Y: 2, Width: 261, Height: 174}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/4.png
+        Name: 8
+        TextureRegion: {X: 1726, Y: 1559, Width: 298, Height: 187}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/3.png
+        Name: 9
+        TextureRegion: {X: 1626, Y: 586, Width: 333, Height: 224}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/2.png
+        Name: 10
+        TextureRegion: {X: 1627, Y: 1662, Width: 379, Height: 256}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/12.png
+        Name: 11
+        TextureRegion: {X: 2, Y: 1666, Width: 555, Height: 350}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/14.png
+        Name: 12
+        TextureRegion: {X: 2, Y: 1634, Width: 664, Height: 394}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/27.png
+        Name: 13
+        TextureRegion: {X: 2, Y: 1450, Width: 927, Height: 519}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/26.png
+        Name: 14
+        TextureRegion: {X: 2, Y: 1450, Width: 1072, Height: 561}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/42.png
+        Name: 15
+        TextureRegion: {X: 2, Y: 2, Width: 1173, Height: 601}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/40.png
+        Name: 16
+        TextureRegion: {X: 2, Y: 2, Width: 1198, Height: 601}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/40.png
+        Name: 17
+        TextureRegion: {X: 2, Y: 610, Width: 1198, Height: 601}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/40.png
+        Name: 18
+        TextureRegion: {X: 2, Y: 1218, Width: 1198, Height: 601}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 34e7d03d-a8f1-42a8-8b81-e7220bee790c
+        Source: ../../../../../../../Downloads/ONAF2_IMG/41.png
+        Name: 19
+        TextureRegion: {X: 2, Y: 2, Width: 1198, Height: 601}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

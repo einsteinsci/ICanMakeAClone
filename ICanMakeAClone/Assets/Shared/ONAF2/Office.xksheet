@@ -1,0 +1,84 @@
+!SpriteSheet
+Id: 87dd2511-12a4-4f5e-b5ca-b144dfc6081d
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Alpha: Interpolated
+PremultiplyAlpha: false
+Packing:
+    ~Id: ea3c4c81-7e94-4997-acdd-e72436564f47
+    AllowRotations: false
+Sprites:
+    -   ~Id: 4cf07a6b-c200-413c-bfef-93f182dd8a30
+        Source: ../../../../../../../Downloads/ONAF2_IMG/11.png
+        Name: Main
+        TextureRegion: {X: 4, Y: 4, Width: 1620, Height: 840}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c9d5baf1-642d-46b4-82cc-6b3f00995ffd
+        Source: ../../../../../../../Downloads/ONAF2_IMG/21.png
+        Name: Dark
+        TextureRegion: {X: 4, Y: 4, Width: 1500, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 9cf79812-4243-4079-88be-2e955f06ec16
+        Source: ../../../../../../../Downloads/ONAF2_IMG/2.png
+        Name: Entry
+        TextureRegion: {X: 1628, Y: 1280, Width: 290, Height: 374}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 0bf40d56-5d9d-4c42-9033-59f54aa38af0
+        Source: ../../../../../../../Downloads/ONAF2_IMG/3.png
+        Name: CreepyPiglet
+        TextureRegion: {X: 196, Y: 1884, Width: 140, Height: 100}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 6ac5d086-6d8e-4e03-adba-8e400a83a8c8
+        Source: ../../../../../../../Downloads/ONAF2_IMG/1.png
+        Name: VentOnL
+        TextureRegion: {X: 1295, Y: 1884, Width: 59, Height: 99}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c01c600e-210b-4e31-9fc1-b145a3e64988
+        Source: ../../../../../../../Downloads/ONAF2_IMG/3.png
+        Name: VentOnR
+        TextureRegion: {X: 1972, Y: 1860, Width: 58, Height: 99}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: a642ce95-db83-4422-acd8-18f3207377c7
+        Source: ../../../../../../../Downloads/ONAF2_IMG/6.png
+        Name: DarkVentOnL
+        TextureRegion: {X: 1764, Y: 464, Width: 130, Height: 202}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: a642ce95-db83-4422-acd8-18f3207377c7
+        Source: ../../../../../../../Downloads/ONAF2_IMG/6.png
+        Name: DarkVentOnR
+        TextureRegion: {X: 1904, Y: 472, Width: 130, Height: 202}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: 62ccefdb-f272-44a5-af36-60208060d571
+        Source: ../../../../../../../Downloads/ONAF2_IMG/5.png
+        Name: Wormhole
+        TextureRegion: {X: 610, Y: 1695, Width: 220, Height: 240}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

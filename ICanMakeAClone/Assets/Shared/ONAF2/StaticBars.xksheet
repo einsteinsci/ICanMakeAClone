@@ -1,0 +1,91 @@
+!SpriteSheet
+Id: 3565d784-9ead-406f-845c-16e6dd096f43
+SerializedVersion: {Xenko: 1.5.0-alpha01}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: AsIs
+Packing:
+    ~Id: 6e79075e-874f-4f65-83cd-d47d8f3e8bc9
+    AllowRotations: false
+Sprites:
+    -   ~Id: c1879e96-f97a-43fb-9297-9374b48b6279
+        Source: ../../StaticBars0.png
+        Name: 0
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c1879e96-f97a-43fb-9297-9374b48b6279
+        Source: ../../StaticBars1.png
+        Name: 1
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c1879e96-f97a-43fb-9297-9374b48b6279
+        Source: ../../StaticBars2.png
+        Name: 2
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c1879e96-f97a-43fb-9297-9374b48b6279
+        Source: ../../StaticBars3.png
+        Name: 3
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c1879e96-f97a-43fb-9297-9374b48b6279
+        Source: ../../StaticBars4.png
+        Name: 4
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c1879e96-f97a-43fb-9297-9374b48b6279
+        Source: ../../StaticBars5.png
+        Name: 5
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c1879e96-f97a-43fb-9297-9374b48b6279
+        Source: ../../StaticBars6.png
+        Name: 6
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c1879e96-f97a-43fb-9297-9374b48b6279
+        Source: ../../StaticBars7.png
+        Name: 7
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c1879e96-f97a-43fb-9297-9374b48b6279
+        Source: ../../StaticBars8.png
+        Name: 8
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: c1879e96-f97a-43fb-9297-9374b48b6279
+        Source: ../../StaticBars9.png
+        Name: 9
+        TextureRegion: {X: 0, Y: 0, Width: 1280, Height: 720}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

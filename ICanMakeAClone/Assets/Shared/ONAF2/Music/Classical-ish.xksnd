@@ -1,0 +1,10 @@
+!SoundMusic
+Id: 1af25a43-b036-4f03-9e30-6290a02c6994
+Tags: []
+Source: ../../../../../../../../Downloads/ONAF2_IMG/Sounds/MusicClassical-ish.mp3
+~Base:
+    Location: --import--
+    Asset: !SoundMusic
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 5adcb5b0-7011-4d28-9741-23ec7c3df617

@@ -1,0 +1,10 @@
+!SoundMusic
+Id: 4cd6a3e2-b2eb-400b-bbff-39feb4210d83
+Tags: []
+Source: ../../../../../../../../Downloads/ONAF2_IMG/Sounds/MusicCredits.mp3
+~Base:
+    Location: --import--
+    Asset: !SoundMusic
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 5adcb5b0-7011-4d28-9741-23ec7c3df617
