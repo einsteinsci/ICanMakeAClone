@@ -65,6 +65,8 @@ namespace ICanMakeAClone
 			ONAF2Component.LoadContent(Content);
 		}
 
+		// Considering inputs are done on a pixel-perfect basis (XNA-style 2D), windowed borderless
+		// and native resolution fullscreen are probably not an option.
 		public void ToggleFullscreen()
 		{
 			GraphicsDeviceManager.IsFullScreen = !GraphicsDeviceManager.IsFullScreen;
@@ -76,7 +78,6 @@ namespace ICanMakeAClone
 			_spriteBatch.Begin(rdc.GraphicsContext, SpriteSortMode.Deferred, BlendStates.NonPremultiplied, _sampler);
 
 			// render me here
-			//_spriteBatch.Draw(MapTexture, new Vector2(30, 150));
 			ONAF2Component.Draw(rdc.RenderContext.Time, _spriteBatch);
 
 			_spriteBatch.End();
