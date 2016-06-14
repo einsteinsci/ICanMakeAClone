@@ -17,8 +17,7 @@ namespace ICanMakeAClone
 {
 	public class CloneGame : Game
 	{
-		public Texture MapTexture
-		{ get; private set; }
+		internal Texture mapTexture;
 
 		public Vector2 WindowSize
 		{
@@ -46,7 +45,7 @@ namespace ICanMakeAClone
 			ONAF2Component = new OnafMain(this);
 
 			Scene scene = SceneSystem.SceneInstance.Scene;
-			var compositor = (SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor;
+			SceneGraphicsCompositorLayers compositor = (SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor;
 			compositor.Master.Renderers.Insert(1, new SceneDelegateRenderer(Draw));
 
 			_spriteBatch = new SpriteBatch(GraphicsDevice) { VirtualResolution = virtualResolution };
@@ -61,9 +60,15 @@ namespace ICanMakeAClone
 
 		public void LoadRealContent()
 		{
-			MapTexture = Content.Load<Texture>("Map");
+			mapTexture = Content.Load<Texture>("Map");
 
 			ONAF2Component.LoadContent(Content);
+		}
+
+		public void ToggleFullscreen()
+		{
+			GraphicsDeviceManager.IsFullScreen = !GraphicsDeviceManager.IsFullScreen;
+			GraphicsDeviceManager.ApplyChanges();
 		}
 
 		public void Draw(RenderDrawContext rdc, RenderFrame frame)

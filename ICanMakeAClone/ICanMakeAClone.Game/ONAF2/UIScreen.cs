@@ -60,16 +60,16 @@ namespace ICanMakeAClone.ONAF2
 		public static readonly Vector2 RECORD_STICKER_OFFSET = new Vector2(912, 371);
 		public static readonly Vector2 RECORD_TIP_OFFSET = new Vector2(474, -44);
 		public static readonly Vector2 VOLUME_OFFSET = new Vector2(273, 473);
-		public static readonly Vector2 HARDBOILED_OFFSET = new Vector2(50, 305);
 		public static readonly Vector2 STAR_OFFSET = new Vector2(50, 115);
 		public static readonly Vector2 SPAM_FINAL_OFFSET = new Vector2(587, 320);
 
 		public static readonly Vector2 VOLUME_SIZE = new Vector2(224, 40);
-		public static readonly Vector2 HARDBOILED_SIZE = new Vector2(460, 50);
 		public static readonly Vector2 SPAM_SIZE = new Vector2(45, 75);
 
 		public static readonly RectangleF VOLUME_INPUTBOX = new RectangleF(270, 475, 223, 35);
 		public static readonly RectangleF STARTGAME_INPUTBOX = new RectangleF(50, 220, 270, 55);
+		public static readonly RectangleF HARDBOILED_INPUTBOX = new RectangleF(50, 305, 460, 50);
+		public static readonly RectangleF FULLSCREEN_INPUTBOX = new RectangleF(50, 385, 450, 55);
 
 		public OnafMain Main
 		{ get; private set; }
@@ -163,7 +163,7 @@ namespace ICanMakeAClone.ONAF2
 			{
 				inputRegions.Clear();
 
-				inputRegions.Add(new InputRegion(HARDBOILED_OFFSET, HARDBOILED_SIZE, true, (i) => {
+				inputRegions.Add(new InputRegion(HARDBOILED_INPUTBOX, true, (i) => {
 					if (!Main.HasWon)
 					{
 						return;
@@ -192,6 +192,10 @@ namespace ICanMakeAClone.ONAF2
 					}
 
 					Main.Level.IsHardBoiled = false;
+				}));
+
+				inputRegions.Add(new InputRegion(FULLSCREEN_INPUTBOX, true, (i) => {
+					Main.MainGame.ToggleFullscreen();
 				}));
 
 				InputRegion volumeInput = new InputRegion(VOLUME_INPUTBOX);
@@ -358,7 +362,7 @@ namespace ICanMakeAClone.ONAF2
 			menuSprites["Volume"].Draw(spriteBatch, VOLUME_OFFSET, sourceRect, Color.White);
 			if (Main.HasWon)
 			{
-				menuSprites["HardBoiledMode"].Draw(spriteBatch, HARDBOILED_OFFSET);
+				menuSprites["HardBoiledMode"].Draw(spriteBatch, HARDBOILED_INPUTBOX.TopLeft);
 			}
 
 			if (Main.HasWonHardboiled)
