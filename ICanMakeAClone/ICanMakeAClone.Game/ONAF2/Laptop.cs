@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,14 +73,11 @@ namespace ICanMakeAClone.ONAF2
 
 		public bool IsRebooting
 		{ get; private set; }
-		
-		internal bool CHEAT_InfiniteBattery
-		{ get; private set; }
 
 		internal float timeUntilNextStatic
 		{ get; private set; }
 
-		internal Dictionary<CameraIndex, InputRegion> roomInputs = new Dictionary<CameraIndex, InputRegion>();
+		internal readonly Dictionary<CameraIndex, InputRegion> roomInputs = new Dictionary<CameraIndex, InputRegion>();
 
 		internal SpriteSheet miscScreens => Level.Main.UI.miscScreens;
 		internal SpriteSheet gameUI => Level.gameUISprites;
@@ -131,8 +127,6 @@ namespace ICanMakeAClone.ONAF2
 		{
 			Level = owner;
 			RebootProgress = 1.0f;
-
-			CHEAT_InfiniteBattery = true;
 
 			cameraOffsets = new Dictionary<CameraIndex, CameraOffsetState>();
 			for (CameraIndex ci = CameraIndex.Cam1; ci < (CameraIndex)8; ci++)
@@ -237,6 +231,23 @@ namespace ICanMakeAClone.ONAF2
 			_chillBarOffset = Level.Rand.Next(0, (int)Level.Main.WindowSize.Y);
 		}
 
+		public void StartStatic()
+		{
+			const float width = RANDOM_STATIC_TIME_MAX - RANDOM_STATIC_TIME_MIN;
+			timeUntilNextStatic = (float)Level.Rand.NextDouble() * width + RANDOM_STATIC_TIME_MIN;
+
+			_currentStaticScreen = Level.Rand.Next(0, UIScreen.STATIC_SCREEN_COUNT);
+			_staticScreensLeft = UIScreen.STATIC_SCREEN_LENGTH;
+			_isStaticIntermittent = true;
+
+			Level.Monsters.OnStatic();
+
+			if (UI.State == UIState.Laptop)
+			{
+				soundStatic.Play();
+			}
+		}
+
 		public List<string> GetDebugLines()
 		{
 			List<string> res = new List<string>();
@@ -273,14 +284,9 @@ namespace ICanMakeAClone.ONAF2
 
 		public void Update(GameTime gt, InputManager input)
 		{
-			if (input.IsKeyPressed(Keys.F8))
-			{
-				CHEAT_InfiniteBattery = !CHEAT_InfiniteBattery;
-			}
-
 			if (_updateRoomInputs && !Level.IsJumpscaring)
 			{
-				foreach (var kvp in roomInputs)
+				foreach (KeyValuePair<CameraIndex, InputRegion> kvp in roomInputs)
 				{
 					kvp.Value.Update(input, Level.Main.WindowSize);
 				}
@@ -325,21 +331,9 @@ namespace ICanMakeAClone.ONAF2
 			timeUntilNextStatic -= elapsed;
 			if (timeUntilNextStatic <= 0 && !Level.IsJumpscaring)
 			{
-				float width = RANDOM_STATIC_TIME_MAX - RANDOM_STATIC_TIME_MIN;
-				timeUntilNextStatic = (float)Level.Rand.NextDouble() * width + RANDOM_STATIC_TIME_MIN;
-
-				_currentStaticScreen = Level.Rand.Next(0, UIScreen.STATIC_SCREEN_COUNT);
-				_staticScreensLeft = UIScreen.STATIC_SCREEN_LENGTH;
-				_isStaticIntermittent = true;
-
-				Level.Monsters.OnStatic();
-
-				if (UI.State == UIState.Laptop)
-				{
-					soundStatic.Play();
-				}
+				StartStatic();
 			}
-			
+
 			foreach (KeyValuePair<CameraIndex, CameraOffsetState> kvp in cameraOffsets)
 			{
 				kvp.Value.Update(gt);
@@ -361,7 +355,7 @@ namespace ICanMakeAClone.ONAF2
 				_powerDownFrame = 0;
 			}
 
-			if (UI.State == UIState.Laptop && !IsRebooting && !CHEAT_InfiniteBattery)
+			if (UI.State == UIState.Laptop && !IsRebooting && !Level.CHEAT_InfiniteBattery)
 			{
 				float drainSpeed = 1.0f / Level.LAPTOP_BATTERY_TIME;
 				Level.LaptopBattery = Math.Max(Level.LaptopBattery - drainSpeed * elapsed, 0.0f);

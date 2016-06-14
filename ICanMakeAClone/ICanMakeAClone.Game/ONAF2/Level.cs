@@ -19,7 +19,6 @@ namespace ICanMakeAClone.ONAF2
 
 		public const float LAPTOP_BATTERY_TIME = 7.0f;
 		public const float SECONDS_PER_HOUR = 90.0f;
-		public const float EXPOSURE_RATE = 0.2f;
 		public const float SHAKE_SPEED = 90.0f;
 		public const float FLIPUP_THRESHOLD = 620.0f;
 		public const float SPAM_FADE_TIME = 1.0f;
@@ -87,7 +86,7 @@ namespace ICanMakeAClone.ONAF2
 		public bool IsJumpscaring
 		{ get; set; }
 
-		public bool HardBoiled
+		public bool IsHardBoiled
 		{ get; set; }
 
 		public string TimeShown
@@ -99,8 +98,8 @@ namespace ICanMakeAClone.ONAF2
 					return "12 AM";
 				}
 
-				float hour = Time / SECONDS_PER_HOUR;
-				return hour.ToString("F0") + " AM";
+				int hour = (int)(Time / SECONDS_PER_HOUR);
+				return hour + " AM";
 			}
 		}
 
@@ -125,10 +124,16 @@ namespace ICanMakeAClone.ONAF2
 		internal bool CHEAT_InfiniteExposure
 		{ get; private set; }
 
+		internal bool CHEAT_InfiniteBattery
+		{ get; private set; }
+
 		internal bool CHEAT_MapDebug
 		{ get; private set; }
 
 		internal bool CHEAT_MonstersStayPut
+		{ get; private set; }
+
+		internal bool CHEAT_OwlInvincibility
 		{ get; private set; }
 
 		internal SpriteFont hourFont;
@@ -164,8 +169,10 @@ namespace ICanMakeAClone.ONAF2
 			VolumeController = new SoundVolumeController();
 
 			CHEAT_InfiniteExposure = true;
+			CHEAT_InfiniteBattery = true;
 			CHEAT_MapDebug = true;
 			CHEAT_MonstersStayPut = false;
+			CHEAT_OwlInvincibility = true;
 		}
 		
 		public void Reset()
@@ -205,32 +212,45 @@ namespace ICanMakeAClone.ONAF2
 			{
 				res.Add("Patience: " + Monsters.Clown.Patience);
 			}
-			if (Monsters.Eyesaur.IsActive)
-			{
-				res.Add("Eyesaur Retirement: " + Monsters.Eyesaur.retirementTimeLeft.ToString("F3"));
-			}
 
 			res.Add("Next Static in: " + Laptop.timeUntilNextStatic.ToString("F3"));
 
-			string cheats = "";
+			string active = "Active: ";
+			foreach(MonsterBase monster in Monsters.Monsters)
+			{
+				if (monster.IsActive)
+				{
+					active += monster.Name + " ";
+				}
+			}
+			res.Add(active.Trim());
+
+			if (CHEAT_InfiniteExposure || CHEAT_InfiniteBattery || CHEAT_MapDebug || CHEAT_MonstersStayPut || CHEAT_OwlInvincibility)
+			{
+				res.Add("");
+				res.Add("CHEATS:");
+			}
+
 			if (CHEAT_InfiniteExposure)
 			{
-				cheats += "Infinite Exposure (F7)";
+				res.Add("Infinite Exposure (F7)");
 			}
-			if (Laptop.CHEAT_InfiniteBattery)
+			if (CHEAT_InfiniteBattery)
 			{
-				cheats += ", Infinite Battery (F8)";
+				res.Add("Infinite Battery (F8)");
 			}
 			if (CHEAT_MapDebug)
 			{
-				cheats += ", Map Debug (F9)";
+				res.Add("Map Debug (F9)");
 			}
 			if (CHEAT_MonstersStayPut)
 			{
-				cheats += ", Monsters Stay Put (F10)";
+				res.Add("Monsters Stay Put (F10)");
 			}
-			cheats = cheats.TrimStart(',').Trim();
-			res.Add("Active Cheats: " + cheats);
+			if (CHEAT_OwlInvincibility)
+			{
+				res.Add("Owl Invincibility (F11)");
+			}
 			
 			return res;
 		}
@@ -282,6 +302,11 @@ namespace ICanMakeAClone.ONAF2
 				CHEAT_InfiniteExposure = !CHEAT_InfiniteExposure;
 			}
 
+			if (input.IsKeyPressed(Keys.F8))
+			{
+				CHEAT_InfiniteBattery = !CHEAT_InfiniteBattery;
+			}
+
 			if (input.IsKeyPressed(Keys.F9))
 			{
 				CHEAT_MapDebug = !CHEAT_MapDebug;
@@ -290,6 +315,11 @@ namespace ICanMakeAClone.ONAF2
 			if (input.IsKeyPressed(Keys.F10))
 			{
 				CHEAT_MonstersStayPut = !CHEAT_MonstersStayPut;
+			}
+
+			if (input.IsKeyPressed(Keys.F11))
+			{
+				CHEAT_OwlInvincibility = !CHEAT_OwlInvincibility;
 			}
 
 			if (_flipUpEnabled && input.GetMousePosPx(Main.WindowSize).Y >= FLIPUP_THRESHOLD && !_isMouseLingering && !IsJumpscaring)
@@ -342,6 +372,13 @@ namespace ICanMakeAClone.ONAF2
 			{
 				HasWon = true;
 				spamMusic.Play();
+
+				Main.HasWon = true;
+
+				if (IsHardBoiled)
+				{
+					Main.HasWonHardboiled = true;
+				}
 			}
 
 			_flipUpEnabled = false;

@@ -40,6 +40,7 @@ namespace ICanMakeAClone.ONAF2
 		public static readonly Vector2 SPOOK_MAIN_OFFSET = new Vector2(608, 463);
 
 		public static readonly TimeSpan ACTIVATE_TIME = TimeSpan.FromMinutes(30);
+		public static readonly TimeSpan ACTIVATE_TIME_HARDBOILED = TimeSpan.FromMinutes(10);
 
 		#region SPOOK_OFFSETS
 		public static readonly Vector2[] SPOOK_OFFSETS = new Vector2[] {
@@ -104,8 +105,7 @@ namespace ICanMakeAClone.ONAF2
 		public Position Pos
 		{ get; private set; }
 
-		public bool IsActive
-		{ get; private set; }
+		public override string Name => "Flumpty";
 
 		internal SpriteSheet spookSprites;
 		internal SpriteSheet roomSprites;
@@ -117,6 +117,8 @@ namespace ICanMakeAClone.ONAF2
 
 		internal float timeUntilSpook
 		{ get; private set; }
+
+		private TimeSpan _activateTime => Level.IsHardBoiled ? ACTIVATE_TIME_HARDBOILED : ACTIVATE_TIME;
 
 		private bool _showSpook;
 
@@ -252,7 +254,7 @@ namespace ICanMakeAClone.ONAF2
 
 			screamDelay.Update(gt);
 
-			if (Level.TimeSinceMidnight > ACTIVATE_TIME && !IsActive)
+			if (Level.TimeSinceMidnight > _activateTime && !IsActive)
 			{
 				IsActive = true;
 			}

@@ -19,13 +19,15 @@ namespace ICanMakeAClone.ONAF2
 		public const int SPOOK_EXPOSURE_RETREAT = 5;
 		public const int SPOOK_ANIM_SPEED = 3;
 		public const int START_PATIENCE = 2000;
+		public const int START_PATIENCE_HARDBOILED = 800;
 		public const int JUMPSCARE_FRAME_COUNT = 11;
 
 		public const float SPOOK_LINGER_TIME = 3.0f;
-		public const float EXPOSURE_RATE = 0.2f; // 5 secs
+		public const float EXPOSURE_RATE = 0.25f; // 4 secs
 		public const float SCREAM_DELAY = 0.15f;
 
 		public static readonly TimeSpan ACTIVATE_TIME = TimeSpan.FromHours(2.1);
+		public static readonly TimeSpan ACTIVATE_TIME_HARDBOILED = TimeSpan.FromHours(1.0);
 
 		public static readonly Vector2 SPOOK_MAIN_OFFSET = new Vector2(0, -5);
 		public static readonly Vector2 ACTIVE_OFFSET = new Vector2(980, 17);
@@ -69,10 +71,12 @@ namespace ICanMakeAClone.ONAF2
 		public bool IsExposing
 		{ get; private set; }
 
-		public bool IsActive
+		public int Patience
 		{ get; private set; }
 
-		public int Patience
+		public override string Name => "Grunkfuss";
+
+		internal int spookFrame
 		{ get; private set; }
 
 		internal SpriteSheet spookSprites;
@@ -80,8 +84,7 @@ namespace ICanMakeAClone.ONAF2
 
 		internal SpriteAnimation spookAnim;
 
-		internal int spookFrame
-		{ get; private set; }
+		private TimeSpan _activateTime => Level.IsHardBoiled ? ACTIVATE_TIME_HARDBOILED : ACTIVATE_TIME;
 
 		private bool _showSpook;
 
@@ -110,7 +113,7 @@ namespace ICanMakeAClone.ONAF2
 		{
 			IsExposing = false;
 			IsActive = false;
-			Patience = START_PATIENCE;
+			Patience = Level.IsHardBoiled ? START_PATIENCE_HARDBOILED : START_PATIENCE;
 
 			spookFrame = 0;
 
@@ -161,7 +164,7 @@ namespace ICanMakeAClone.ONAF2
 				_patienceShakeOffset = new Vector2(x, y);
 			}
 
-			if (Level.TimeSinceMidnight >= ACTIVATE_TIME && !IsActive)
+			if (Level.TimeSinceMidnight >= _activateTime && !IsActive)
 			{
 				Activate();
 			}
@@ -194,7 +197,7 @@ namespace ICanMakeAClone.ONAF2
 				if (Patience == 0)
 				{
 					StartSpook();
-					Patience = START_PATIENCE;
+					Patience = Level.IsHardBoiled ? START_PATIENCE_HARDBOILED : START_PATIENCE;
 				}
 			}
 
@@ -236,7 +239,7 @@ namespace ICanMakeAClone.ONAF2
 					spookFrame = 0;
 					_lingerTime = SPOOK_LINGER_TIME;
 					_showSpook = false;
-					Patience = START_PATIENCE;
+					//Patience = Level.IsHardBoiled ? START_PATIENCE_HARDBOILED : START_PATIENCE;
 				}
 			}
 		}

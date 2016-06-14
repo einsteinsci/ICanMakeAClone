@@ -193,12 +193,12 @@ namespace ICanMakeAClone.ONAF2
 
 			for (int i = 1; i <= 4; i++)
 			{
-				string path = "ONAF2/Sounds/Spotted" + i.ToString();
+				string path = "ONAF2/Sounds/MSG2-Spotted"; //"ONAF2/Sounds/Spotted" + i;
 				spookSounds.Add(content.LoadSoundEffect(Level, path));
 			}
 
-			soundThunk1 = content.LoadSoundEffect(Level, "ONAF2/Sounds/OwlHitVent1");
-			soundThunk2 = content.LoadSoundEffect(Level, "ONAF2/Sounds/OwlHitVent2");
+			soundThunk1 = content.LoadSoundEffect(Level, "ONAF2/Sounds/OwlHitVent1", 0.6f);
+			soundThunk2 = content.LoadSoundEffect(Level, "ONAF2/Sounds/OwlHitVent2", 0.6f);
 			soundPopup = content.LoadSoundEffect(Level, "ONAF2/Sounds/RedmanPopUp");
 			soundRedScreenOfDeath = content.LoadSoundEffect(Level, "ONAF2/Sounds/RedmanCrash");
 

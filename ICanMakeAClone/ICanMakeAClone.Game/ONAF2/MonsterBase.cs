@@ -23,9 +23,15 @@ namespace ICanMakeAClone.ONAF2
 
 		public bool IsJumpscaring => Manager.currentJumpscarer == this;
 
+		public bool IsActive
+		{ get; protected set; }
+
 		public virtual bool ShakesOnJumpscare => true;
 
-		internal float ExposureMultiplier => Level.HardBoiled ? Level.HARDBOILED_EXPOSURE_MULTIPLIER : 1.0f;
+		public abstract string Name
+		{ get; }
+
+		internal float ExposureMultiplier => Level.IsHardBoiled ? Level.HARDBOILED_EXPOSURE_MULTIPLIER : 1.0f;
 
 		internal SpriteSheet mapIcons => Manager.mapIcons;
 

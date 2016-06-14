@@ -16,6 +16,7 @@ namespace ICanMakeAClone.ONAF2
 	public class GoldenFlumpty : MonsterBase
 	{
 		public const int APPEARANCE_RARITY = 15;
+		public const int APPEARANCE_RARITY_HARDBOILED = 8;
 		public const int TWITCH_RARITY = 40;
 
 		public const float JUMPSCARE_DELAY = 3.0f;
@@ -24,6 +25,7 @@ namespace ICanMakeAClone.ONAF2
 		public static readonly Vector2 MAP_ICON_OFFSET = new Vector2(225, 320);
 		
 		public static readonly TimeSpan ACTIVATE_TIME = TimeSpan.FromHours(4.5);
+		public static readonly TimeSpan ACTIVATE_TIME_HARDBOILED = TimeSpan.FromHours(1.0);
 
 		public static readonly Vector2[] SPOOK_OFFSETS = new Vector2[] {
 			new Vector2(855, 147),
@@ -31,15 +33,16 @@ namespace ICanMakeAClone.ONAF2
 			new Vector2(855, 116)
 		};
 
-		public bool IsActive
-		{ get; private set; }
-
 		public bool IsInOffice
 		{ get; private set; }
+
+		public override string Name => "GoldenFlumpty";
 
 		public override bool ShakesOnJumpscare => false;
 
 		internal SoundEffect soundDetect;
+
+		private TimeSpan _activateTime => Level.IsHardBoiled ? ACTIVATE_TIME_HARDBOILED : ACTIVATE_TIME;
 
 		private float _timeBeforeJumpscare;
 		private float _jumpscareTimeLeft;
@@ -53,7 +56,8 @@ namespace ICanMakeAClone.ONAF2
 
 		public void OnLaptopDown()
 		{
-			if (IsActive && Rand.Next(APPEARANCE_RARITY) == 0)
+			int rarity = Level.IsHardBoiled ? APPEARANCE_RARITY_HARDBOILED : APPEARANCE_RARITY;
+			if (IsActive && Rand.Next(rarity) == 0)
 			{
 				IsInOffice = true;
 				_timeBeforeJumpscare = JUMPSCARE_DELAY;

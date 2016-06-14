@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Core.Serialization.Assets;
+using SiliconStudio.Xenko.Audio;
 using SiliconStudio.Xenko.Games;
 using SiliconStudio.Xenko.Graphics;
 using SiliconStudio.Xenko.Input;
@@ -27,17 +28,18 @@ namespace ICanMakeAClone.ONAF2
 			VentExitE
 		}
 
-		public const int PERCH_LEAVE_RARITY = 10;
+		public const int PERCH_LEAVE_RARITY = 8;
+		public const int PERCH_LEAVE_RARITY_HARDBOILED = 4;
 		public const int VENT_FRAME_COUNT = 20;
 		public const int JUMPSCARE_FRAME_COUNT = 20;
 		public const int JUMPSCARE_SPIN_END_FRAME = 12;
 
 		public const float SCREAM_DELAY = 0.6f;
-		public const float START_RETIREMENT_TIME = 15.0f;
+		public const float START_RETIREMENT_TIME = 10.0f;
 
 		public const double VENT_ENTRY_TIME = 5.0;
 		public const double VENT_MID_TIME = 5.0;
-		public const double VENT_BEND_TIME = 3.0;
+		public const double VENT_BEND_TIME = 2.5;
 
 		public static readonly Vector2 PERCH_OFFSET = new Vector2(563, 150);
 		public static readonly Vector2 VENT_EARLY_EXTRA_OFFSET = new Vector2(5, 0);
@@ -107,8 +109,7 @@ namespace ICanMakeAClone.ONAF2
 		public Position Pos
 		{ get; private set; }
 
-		public bool IsActive
-		{ get; private set; }
+		public override string Name => "Owl";
 
 		internal SpriteSheet perchSprites;
 		internal SpriteSheet ventSprites;
@@ -163,31 +164,35 @@ namespace ICanMakeAClone.ONAF2
 				});
 				break;
 			case Position.VentExitW:
-				if (Level.Office.Vent == VentState.Right)
+				if (Level.Office.Vent == VentState.Right && !Level.CHEAT_OwlInvincibility)
 				{
 					BeginJumpscare();
 				}
 				else
 				{
-					Manager.soundThunk1.Play();
-					Pos = Position.Perch;
-					_retirementTimeLeft = START_RETIREMENT_TIME;
+					DoThunk(Manager.soundThunk1);
 				}
 				break;
 			case Position.VentExitE:
-				if (Level.Office.Vent == VentState.Left)
+				if (Level.Office.Vent == VentState.Left && !Level.CHEAT_OwlInvincibility)
 				{
 					BeginJumpscare();
 				}
 				else
 				{
-					Manager.soundThunk2.Play();
-					Pos = Position.Perch;
-					_retirementTimeLeft = START_RETIREMENT_TIME;
+					DoThunk(Manager.soundThunk2);
 				}
 				break;
 			}
 			#endregion advanceTimer
+		}
+
+		public void DoThunk(SoundEffect thunk)
+		{
+			thunk?.Play();
+			Pos = Position.Perch;
+			_retirementTimeLeft = START_RETIREMENT_TIME;
+			Level.Laptop.StartStatic();
 		}
 
 		public override void Reset()
@@ -238,7 +243,8 @@ namespace ICanMakeAClone.ONAF2
 		{
 			if (Pos == Position.Perch && _retirementTimeLeft <= 0 && !Level.CHEAT_MonstersStayPut)
 			{
-				if (Rand.Next(PERCH_LEAVE_RARITY) == 0)
+				int rarity = Level.IsHardBoiled ? PERCH_LEAVE_RARITY_HARDBOILED : PERCH_LEAVE_RARITY;
+				if (Rand.Next(rarity) == 0)
 				{
 					Advance();
 				}
@@ -278,6 +284,7 @@ namespace ICanMakeAClone.ONAF2
 			if (Level.TimeSinceMidnight >= ACTIVATE_TIME && !IsActive)
 			{
 				IsActive = true;
+				Level.Laptop.StartStatic();
 			}
 
 			if (_retirementTimeLeft > 0 && IsActive)

@@ -126,7 +126,7 @@ namespace ICanMakeAClone.ONAF2
 				{
 					soundLightOn.Play();
 
-					if (!Level.HardBoiled)
+					if (!Level.IsHardBoiled)
 					{
 						musicClassicalish.Play();
 					}
@@ -136,7 +136,7 @@ namespace ICanMakeAClone.ONAF2
 					soundLightOff.Play();
 					Level.Monsters.GoldenFlumpty.Shoo();
 
-					if (!Level.HardBoiled) // Don't pause music in hard boiled mode
+					if (!Level.IsHardBoiled) // Don't pause music in hard boiled mode
 					{
 						musicClassicalish.Pause();
 					}
@@ -173,7 +173,7 @@ namespace ICanMakeAClone.ONAF2
 				showMuteButton = false;
 				muteButtonTimer.Stop();
 
-				if (Level.HardBoiled)
+				if (Level.IsHardBoiled)
 				{
 					musicToreador.Play();
 				}
@@ -213,7 +213,7 @@ namespace ICanMakeAClone.ONAF2
 				showMuteButton = true;
 				muteButtonTimer = new HelperTimer(TimeSpan.FromSeconds(15.0), true, "MuteSong", () => {
 					showMuteButton = false;
-					if (Level.HardBoiled)
+					if (Level.IsHardBoiled)
 					{
 						musicToreador.PlayIfNotPlaying();
 					}
@@ -260,6 +260,7 @@ namespace ICanMakeAClone.ONAF2
 
 			musicIntro = content.LoadMusic(Level, "ONAF2/Music/Welcome", 0.8f, false);
 			musicClassicalish = content.LoadMusic(Level, "ONAF2/Music/Classical-ish", 0.7f);
+			musicToreador = content.LoadMusic(Level, "ONAF2/Music/Toreador", 0.7f);
 
 			officeVentAnim = new SpriteAnimation(officeVentDoorSprites,
 				Vector2.Zero,

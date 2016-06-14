@@ -34,7 +34,7 @@ namespace ICanMakeAClone.ONAF2
 		public static readonly Vector2 CANCEL_BUTTON_HITBOX_SIZE = new Vector2(182, 56);
 		public static readonly Vector2 WINDOW_BAR_OFFSET = new Vector2(166, 124);
 
-		public bool IsActive => _retirementTime <= 0;
+		public bool IsReady => _retirementTime <= 0;
 
 		public bool IsVirusUp
 		{ get; private set; }
@@ -44,7 +44,9 @@ namespace ICanMakeAClone.ONAF2
 
 		public int ProgressBarCount
 		{ get; private set; }
-		
+
+		public override string Name => "Redman";
+
 		internal SpriteSheet gameUISprites => Level.gameUISprites;
 
 		internal InputRegion cancelButton;
@@ -113,7 +115,7 @@ namespace ICanMakeAClone.ONAF2
 				cancelButton?.Update(input, Level.Main.WindowSize);
 			}
 
-			if (IsActive && !IsVirusUp && !IsRedScreenOfDeathUp)
+			if (IsReady && !IsVirusUp && !IsRedScreenOfDeathUp)
 			{
 				if (Rand.Next(POPUP_RARITY) == 0)
 				{

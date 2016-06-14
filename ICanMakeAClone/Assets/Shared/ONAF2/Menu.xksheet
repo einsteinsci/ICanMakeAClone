@@ -56,3 +56,11 @@ Sprites:
         CenterFromMiddle: false
         Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   ~Id: ef794edb-0ba3-46fc-9711-6674e4bce9d9
+        Source: ../../../../../../../Downloads/ONAF2_IMG/2.png
+        Name: Star
+        TextureRegion: {X: 1932, Y: 1944, Width: 92, Height: 88}
+        Center: {X: 0.0, Y: 0.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

@@ -29,6 +29,7 @@ namespace ICanMakeAClone.ONAF2
 		public const int SPOOK_ANIM_SPEED = 3;
 		public const int MOVEMENT_RARITY = 2;
 		public const int EMERGE_RARITY = 12;
+		public const int EMERGE_RARITY_HARDBOILED = 5;
 		public const int JUMPSCARE_FRAME_COUNT = 14;
 
 		public const float SPOOK_LINGER_TIME = 3.0f;
@@ -40,6 +41,7 @@ namespace ICanMakeAClone.ONAF2
 		public static readonly Vector2 SPOOK_MAIN_OFFSET = new Vector2(608, 92);
 
 		public static readonly TimeSpan ACTIVATE_TIME = TimeSpan.FromHours(4.0);
+		public static readonly TimeSpan ACTIVATE_TIME_HARDBOILED = TimeSpan.FromHours(1.0);
 
 		public static readonly Vector2[] SPOOK_OFFSETS = new Vector2[] {
 			new Vector2(0, 75),
@@ -81,6 +83,8 @@ namespace ICanMakeAClone.ONAF2
 
 		public bool IsEmerged => Pos != Position.Cam1_Waiting;
 
+		public override string Name => "Eyesaur";
+
 		internal SpriteSheet spookSprites;
 		internal SpriteSheet roomSprites;
 
@@ -94,6 +98,10 @@ namespace ICanMakeAClone.ONAF2
 
 		internal float retirementTimeLeft
 		{ get; private set; }
+
+		private TimeSpan _activateTime => Level.IsHardBoiled ? ACTIVATE_TIME_HARDBOILED : ACTIVATE_TIME;
+
+		private int _emergeRarity => Level.IsHardBoiled ? EMERGE_RARITY_HARDBOILED : EMERGE_RARITY;
 
 		private bool _showSpook;
 
@@ -200,7 +208,7 @@ namespace ICanMakeAClone.ONAF2
 
 			if (IsActive)
 			{
-				int rarity = IsEmerged ? MOVEMENT_RARITY : EMERGE_RARITY;
+				int rarity = IsEmerged ? MOVEMENT_RARITY : _emergeRarity;
 
 				if (Rand.Next(rarity) == 0 && retirementTimeLeft <= 0)
 				{
@@ -227,14 +235,14 @@ namespace ICanMakeAClone.ONAF2
 				}
 			}
 
-			if (Level.TimeSinceMidnight >= ACTIVATE_TIME && !IsActive)
+			if (Level.TimeSinceMidnight >= _activateTime && !IsActive)
 			{
 				IsActive = true;
 			}
 
 			if (IsExposing && Level.Office.IsLightOn)
 			{
-				if (Level.HardBoiled && Level.Exposure > 0.25f)
+				if (Level.IsHardBoiled && Level.Exposure > 0.25f)
 				{
 					Level.Exposure = 1.0f; // DIE
 				}

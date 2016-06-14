@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +19,10 @@ namespace ICanMakeAClone.ONAF2
 
 		[JsonProperty]
 		public bool HasWon
+		{ get; set; }
+
+		[JsonProperty]
+		public bool HasWonHardboiled
 		{ get; set; }
 
 		public SavedGame()

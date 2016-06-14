@@ -37,8 +37,8 @@ namespace ICanMakeAClone.ONAF2
 		public const int STATIC_SCREEN_LENGTH = 4;
 		public const int STATIC_SCREEN_COUNT = 10;
 
-		public const float DEBUG_OFFSET = 70;
-		public const float DEBUG_LINE_SPACING = 15;
+		public const float DEBUG_OFFSET = 50;
+		public const float DEBUG_LINE_SPACING = 13;
 
 		public const float RARE_STARTUP_TIME = 7.0f;
 		public const float DEATH_STATIC_TIME = 5.0f;
@@ -55,20 +55,21 @@ namespace ICanMakeAClone.ONAF2
 		public const float VOLUME_MIN_THRESHOLD = 0.02f;
 		public const float VOLUME_MAX_THRESHOLD = 0.98f;
 
-		public static readonly Vector2 MENU_OFFSET = new Vector2(20, 16);
-		public static readonly Vector2 RECORD_PLAYER_OFFSET = new Vector2(556, 25);
-		public static readonly Vector2 RECORD_STICKER_OFFSET = new Vector2(892, 371);
-		public static readonly Vector2 RECORD_TIP_OFFSET = new Vector2(454, -44);
-		public static readonly Vector2 VOLUME_OFFSET = new Vector2(253, 473);
-		public static readonly Vector2 HARDBOILED_OFFSET = new Vector2(30, 305);
+		public static readonly Vector2 MENU_OFFSET = new Vector2(40, 16);
+		public static readonly Vector2 RECORD_PLAYER_OFFSET = new Vector2(576, 25);
+		public static readonly Vector2 RECORD_STICKER_OFFSET = new Vector2(912, 371);
+		public static readonly Vector2 RECORD_TIP_OFFSET = new Vector2(474, -44);
+		public static readonly Vector2 VOLUME_OFFSET = new Vector2(273, 473);
+		public static readonly Vector2 HARDBOILED_OFFSET = new Vector2(50, 305);
+		public static readonly Vector2 STAR_OFFSET = new Vector2(50, 115);
 		public static readonly Vector2 SPAM_FINAL_OFFSET = new Vector2(587, 320);
 
 		public static readonly Vector2 VOLUME_SIZE = new Vector2(224, 40);
 		public static readonly Vector2 HARDBOILED_SIZE = new Vector2(460, 50);
 		public static readonly Vector2 SPAM_SIZE = new Vector2(45, 75);
 
-		public static readonly RectangleF VOLUME_INPUTBOX = new RectangleF(250, 475, 223, 35);
-		public static readonly RectangleF STARTGAME_INPUTBOX = new RectangleF(30, 220, 270, 55);
+		public static readonly RectangleF VOLUME_INPUTBOX = new RectangleF(270, 475, 223, 35);
+		public static readonly RectangleF STARTGAME_INPUTBOX = new RectangleF(50, 220, 270, 55);
 
 		public OnafMain Main
 		{ get; private set; }
@@ -101,7 +102,7 @@ namespace ICanMakeAClone.ONAF2
 
 		internal SoundEffect soundStatic;
 		
-		internal List<InputRegion> inputRegions = new List<InputRegion>();
+		internal readonly List<InputRegion> inputRegions = new List<InputRegion>();
 		
 		internal HelperTimer timer;
 
@@ -163,6 +164,11 @@ namespace ICanMakeAClone.ONAF2
 				inputRegions.Clear();
 
 				inputRegions.Add(new InputRegion(HARDBOILED_OFFSET, HARDBOILED_SIZE, true, (i) => {
+					if (!Main.HasWon)
+					{
+						return;
+					}
+
 					if (Rand.Next(RARE_SCREEN_RARITY) == 0)
 					{
 						SetStateNextFrame(UIState.RareStartup);
@@ -172,7 +178,7 @@ namespace ICanMakeAClone.ONAF2
 						SetStateNextFrame(UIState.Office);
 					}
 
-					Main.Level.HardBoiled = true;
+					Main.Level.IsHardBoiled = true;
 				}));
 
 				inputRegions.Add(new InputRegion(STARTGAME_INPUTBOX, true, (i) => {
@@ -185,7 +191,7 @@ namespace ICanMakeAClone.ONAF2
 						SetStateNextFrame(UIState.Office);
 					}
 
-					Main.Level.HardBoiled = false;
+					Main.Level.IsHardBoiled = false;
 				}));
 
 				InputRegion volumeInput = new InputRegion(VOLUME_INPUTBOX);
@@ -249,7 +255,7 @@ namespace ICanMakeAClone.ONAF2
 					_doingSpam = true;
 					timer = new HelperTimer(TimeSpan.FromSeconds(SPAM_TIME), "SpamEnd", () => {
 						_doingSpam = false;
-						if (Main.Level.HardBoiled)
+						if (Main.Level.IsHardBoiled)
 						{
 							SetState(UIState.Newspaper);
 						}
@@ -337,7 +343,7 @@ namespace ICanMakeAClone.ONAF2
 
 		public void DrawRareStartup(SpriteBatch spriteBatch)
 		{
-			miscScreens["RareStartup" + RareStartupIndex.ToString()].Draw(spriteBatch, Vector2.Zero);
+			miscScreens["RareStartup" + RareStartupIndex].Draw(spriteBatch, Vector2.Zero);
 		}
 
 		public void DrawMainMenu(SpriteBatch spriteBatch)
@@ -353,6 +359,11 @@ namespace ICanMakeAClone.ONAF2
 			if (Main.HasWon)
 			{
 				menuSprites["HardBoiledMode"].Draw(spriteBatch, HARDBOILED_OFFSET);
+			}
+
+			if (Main.HasWonHardboiled)
+			{
+				menuSprites["Star"].Draw(spriteBatch, STAR_OFFSET);
 			}
 
 			miscScreens["ChillBarSmall"].Draw(spriteBatch, new Vector2(0, _chillbarOffset));
@@ -382,7 +393,7 @@ namespace ICanMakeAClone.ONAF2
 
 		public void DrawTheEggnd(SpriteBatch sb)
 		{
-			miscScreens["TheEggnd" + _theEggndFrame.ToString()].Draw(sb, Vector2.Zero);
+			miscScreens["TheEggnd" + _theEggndFrame].Draw(sb, Vector2.Zero);
 		}
 
 		public void DrawNewspaper(SpriteBatch sb)
@@ -520,7 +531,7 @@ namespace ICanMakeAClone.ONAF2
 			// The Eggnd
 			if (gameTime.FrameCount % THE_EGGND_FRAMES_APART == 0)
 			{
-				_theEggndFrame = (_theEggndFrame + 1) % 4;
+				_theEggndFrame = (_theEggndFrame + 1) % THE_EGGND_FRAME_COUNT;
 			}
 
 			// Debug
@@ -545,7 +556,7 @@ namespace ICanMakeAClone.ONAF2
 			}
 			else
 			{
-				DebugLines.Add("UI State: " + State.ToString());
+				DebugLines.Add("UI State: " + State);
 				DebugLines.Add("UI Timer: " + (timer?.ToString() ?? "NULL"));
 				DebugLines.Add("Volume: " + Main.Volume.ToString("F3"));
 			}

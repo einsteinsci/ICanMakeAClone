@@ -23,8 +23,7 @@ namespace ICanMakeAClone.ONAF2
 			OfficeEntry,
 			Cam6_Kazotsky, // https://wiki.teamfortress.com/wiki/Kazotsky_Kick
 		}
-
-	
+		
 		public const int SPOOK_LINGER_FRAME = 3;
 		public const int SPOOK_FRAME_COUNT = 28;
 		public const int SPOOK_EXPOSURE_ACTIVE = 0;
@@ -42,6 +41,7 @@ namespace ICanMakeAClone.ONAF2
 		public static readonly Vector2 SPOOK_MAIN_OFFSET = new Vector2(608, 440);
 
 		public static readonly TimeSpan ACTIVATE_TIME = TimeSpan.FromHours(1.33);
+		public static readonly TimeSpan ACTIVATE_TIME_HARDBOILED = TimeSpan.FromMinutes(20);
 		public static readonly TimeSpan LATE_NIGHT = TimeSpan.FromHours(3.75);
 
 		#region SPOOK_OFFSETS
@@ -99,11 +99,10 @@ namespace ICanMakeAClone.ONAF2
 		public bool IsExposing
 		{ get; private set; }
 
-		public bool IsActive
-		{ get; private set; }
-
 		public Position Pos
 		{ get; private set; }
+
+		public override string Name => "BBB";
 
 		internal SpriteSheet spookSprites;
 		internal SpriteSheet roomSprites;
@@ -118,6 +117,8 @@ namespace ICanMakeAClone.ONAF2
 
 		// Is twice as active after 3:45 AM
 		internal int movementRarity => Level.TimeSinceMidnight > LATE_NIGHT ? MOVEMENT_RARITY_LATE : MOVEMENT_RARITY;
+
+		private TimeSpan _activateTime => Level.IsHardBoiled ? ACTIVATE_TIME_HARDBOILED : ACTIVATE_TIME;
 
 		private bool _showSpook;
 
@@ -274,7 +275,7 @@ namespace ICanMakeAClone.ONAF2
 
 			screamDelay.Update(gt);
 
-			if (Level.TimeSinceMidnight >= ACTIVATE_TIME && !IsActive)
+			if (Level.TimeSinceMidnight >= _activateTime && !IsActive)
 			{
 				IsActive = true;
 			}

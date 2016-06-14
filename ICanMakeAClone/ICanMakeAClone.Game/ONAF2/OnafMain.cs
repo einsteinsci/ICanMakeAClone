@@ -61,6 +61,19 @@ namespace ICanMakeAClone.ONAF2
 			}
 		}
 
+		public bool HasWonHardboiled
+		{
+			get
+			{
+				return Save.HasWonHardboiled;
+			}
+			set
+			{
+				Save.HasWonHardboiled = value;
+				Save.Save();
+			}
+		}
+
 		public OnafMain(CloneGame mainGame)
 		{
 			MainGame = mainGame;
