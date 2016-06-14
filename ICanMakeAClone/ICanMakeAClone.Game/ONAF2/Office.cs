@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using ICanMakeAClone.AI;
+
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Core.Serialization.Assets;
 using SiliconStudio.Xenko.Audio;
@@ -47,6 +50,8 @@ namespace ICanMakeAClone.ONAF2
 		
 		public Level Level
 		{ get; private set; }
+
+		public IPlayerSource Bot => Level.Bot;
 
 		public UIState State => Level.Main.UI.State;
 
@@ -99,11 +104,11 @@ namespace ICanMakeAClone.ONAF2
 		
 		internal SpriteAnimation officeVentAnim;
 
-		internal InputRegion lightswitchInput;
-		internal InputRegion buttonLeftInput;
-		internal InputRegion buttonRightInput;
-		internal InputRegion rawrInput;
-		internal InputRegion muteIntroInput;
+		internal readonly InputRegion lightswitchInput;
+		internal readonly InputRegion buttonLeftInput;
+		internal readonly InputRegion buttonRightInput;
+		internal readonly InputRegion rawrInput;
+		internal readonly InputRegion muteIntroInput;
 
 		internal HelperTimer muteButtonTimer;
 
@@ -275,11 +280,11 @@ namespace ICanMakeAClone.ONAF2
 		{
 			if (!Level.IsJumpscaring)
 			{
-				lightswitchInput.Update(input, WindowSize);
-				buttonLeftInput.Update(input, WindowSize);
-				buttonRightInput.Update(input, WindowSize);
-				rawrInput.Update(input, WindowSize);
-				muteIntroInput.Update(input, WindowSize);
+				lightswitchInput.Update(Bot);
+				buttonLeftInput.Update(Bot);
+				buttonRightInput.Update(Bot);
+				rawrInput.Update(Bot);
+				muteIntroInput.Update(Bot);
 
 				muteButtonTimer.Update(gameTime);
 			}

@@ -84,8 +84,8 @@ namespace ICanMakeAClone.ONAF2
 		public int RareStartupIndex
 		{ get; private set; }
 
-		public List<string> DebugLines
-		{ get; private set; }
+		public readonly List<string> DebugLines = new List<string>();
+		public readonly List<string> DebugLinesAI = new List<string>();
 
 		public bool ShowDebug
 		{ get; set; }
@@ -125,8 +125,6 @@ namespace ICanMakeAClone.ONAF2
 		public UIScreen(OnafMain main)
 		{
 			Main = main;
-
-			DebugLines = new List<string>();
 
 			ShowDebug = true;
 
@@ -473,6 +471,16 @@ namespace ICanMakeAClone.ONAF2
 					sb.DrawString(debugFont, line, new Vector2(x, offset), Color.White, TextAlignment.Right);
 					offset += DEBUG_LINE_SPACING;
 				}
+
+				if (State.IsInGame())
+				{
+					offset = DEBUG_OFFSET;
+					foreach (string line in DebugLinesAI)
+					{
+						sb.DrawString(debugFont, line, new Vector2(DEBUG_LINE_SPACING, offset), Color.White);
+						offset += DEBUG_LINE_SPACING;
+					}
+				}
 			}
 		}
 
@@ -547,7 +555,7 @@ namespace ICanMakeAClone.ONAF2
 			DebugLines.Clear();
 
 			Vector2 mousePos = input.GetMousePosPx(Main.WindowSize);
-			DebugLines.Add("Mouse Pos: " + ((int)mousePos.X).ToString() + " " + ((int)mousePos.Y).ToString());
+			DebugLines.Add("Mouse Pos: " + (int)mousePos.X + " " + (int)mousePos.Y);
 			DebugLines.Add("");
 
 			if (State == UIState.Office)
@@ -569,6 +577,10 @@ namespace ICanMakeAClone.ONAF2
 			{
 				DebugLines.AddRange(Main.Level.GetDebugLines());
 			}
+
+			DebugLinesAI.Clear();
+			DebugLinesAI.Add("Type: " + Main.Level.Bot.SourceName);
+			DebugLinesAI.AddRange(Main.Level.Bot.GetDebugLines());
 
 			// Small stuff
 			if (timer != null)

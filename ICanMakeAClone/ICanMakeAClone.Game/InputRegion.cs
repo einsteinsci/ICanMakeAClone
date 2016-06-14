@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using ICanMakeAClone.AI;
+
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Games;
 using SiliconStudio.Xenko.Input;
 
 namespace ICanMakeAClone
@@ -51,25 +53,36 @@ namespace ICanMakeAClone
 			{
 				if (input.IsMouseButtonPressed(MouseButton.Left))
 				{
-					if (Click != null)
-					{
-						Click(input);
-					}
+					Click?.Invoke(input);
 				}
 				else if (input.IsMouseButtonReleased(MouseButton.Left))
 				{
-					if (MouseUp != null)
-					{
-						MouseUp(input);
-					}
+					MouseUp?.Invoke(input);
 				}
 
 				if (input.IsMouseButtonDown(MouseButton.Left))
 				{
-					if (MouseDown != null)
-					{
-						MouseDown(input);
-					}
+					MouseDown?.Invoke(input);
+				}
+			}
+		}
+
+		public void Update(IPlayerSource bot)
+		{
+			if (IsEnabled && Region.Contains(bot.MousePos))
+			{
+				if (bot.IsButtonPressed(MouseButton.Left))
+				{
+					Click?.Invoke(null);
+				}
+				else if (bot.IsButtonReleased(MouseButton.Left))
+				{
+					MouseUp?.Invoke(null);
+				}
+
+				if (bot.IsButtonDown(MouseButton.Left))
+				{
+					MouseDown?.Invoke(null);
 				}
 			}
 		}

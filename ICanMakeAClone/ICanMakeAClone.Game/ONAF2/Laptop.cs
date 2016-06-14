@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using ICanMakeAClone.AI;
+
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Core.Serialization.Assets;
 using SiliconStudio.Xenko.Audio;
@@ -35,7 +38,7 @@ namespace ICanMakeAClone.ONAF2
 		public const float RANDOM_STATIC_TIME_MAX = 8.0f;
 
 		public static readonly Vector2 WINDOW_OFFSET = new Vector2(41, 78);
-		public static readonly Vector2 WINDOW_CENTER_OFFSET = new Vector2(640, 378.5f);
+		//public static readonly Vector2 WINDOW_CENTER_OFFSET = new Vector2(640, 378.5f);
 		public static readonly Vector2 REBOOT_BAR_OFFSET = new Vector2(482, 452);
 		public static readonly Vector2 MAP_OFFSET = new Vector2(845, 285);
 		public static readonly Vector2 MAP_TEXT_OFFSET = new Vector2(5, 2);
@@ -57,10 +60,12 @@ namespace ICanMakeAClone.ONAF2
 		public static readonly CameraIndex[] CAMERAS_WITH_PANNING = new CameraIndex[] {
 			CameraIndex.Cam1, CameraIndex.Cam2, CameraIndex.Cam6, CameraIndex.Cam7 };
 
-		public UIScreen UI => Level.Main.UI;
-
 		public Level Level
 		{ get; private set; }
+
+		public UIScreen UI => Level.Main.UI;
+
+		public IPlayerSource Bot => Level.Bot;
 
 		public CameraIndex ActiveCamera
 		{ get; set; }
@@ -87,7 +92,6 @@ namespace ICanMakeAClone.ONAF2
 
 		internal SpriteSheet laptopSprites;
 		internal SpriteSheet cameraRoomSprites;
-		internal SpriteSheet noiseBars;
 		internal SpriteSheet powerDownSprites;
 
 		internal SpriteFont retroFontSmall;
@@ -265,7 +269,6 @@ namespace ICanMakeAClone.ONAF2
 			retroFontSmall = content.Load<SpriteFont>("ONAF2/RetroFontSmall");
 
 			cameraRoomSprites = content.Load<SpriteSheet>("ONAF2/Cameras");
-			noiseBars = content.Load<SpriteSheet>("ONAF2/StaticBars");
 			powerDownSprites = content.Load<SpriteSheet>("ONAF2/LaptopPowerDown");
 
 			laptopSprites = content.Load<SpriteSheet>("ONAF2/Laptop");
@@ -288,7 +291,7 @@ namespace ICanMakeAClone.ONAF2
 			{
 				foreach (KeyValuePair<CameraIndex, InputRegion> kvp in roomInputs)
 				{
-					kvp.Value.Update(input, Level.Main.WindowSize);
+					kvp.Value.Update(Bot);
 				}
 			}
 

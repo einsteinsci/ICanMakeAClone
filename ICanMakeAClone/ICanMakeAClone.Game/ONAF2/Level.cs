@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using ICanMakeAClone.AI;
+
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Core.Serialization.Assets;
 using SiliconStudio.Xenko.Audio;
@@ -89,6 +92,9 @@ namespace ICanMakeAClone.ONAF2
 		public bool IsHardBoiled
 		{ get; set; }
 
+		public IPlayerSource Bot
+		{ get; private set; }
+
 		public string TimeShown
 		{
 			get
@@ -173,6 +179,8 @@ namespace ICanMakeAClone.ONAF2
 			CHEAT_MapDebug = true;
 			CHEAT_MonstersStayPut = false;
 			CHEAT_OwlInvincibility = true;
+
+			Bot = new PlayerMouseInput(this);
 		}
 		
 		public void Reset()
@@ -193,6 +201,8 @@ namespace ICanMakeAClone.ONAF2
 
 			IsJumpscaring = false;
 			jumpscareShakeOffset = Vector2.Zero;
+
+			Bot.Reset();
 		}
 
 		public void Hide()
@@ -275,6 +285,8 @@ namespace ICanMakeAClone.ONAF2
 
 		public void Update(GameTime gt, InputManager input)
 		{
+			Bot.Update(gt, input);
+
 			if (HasWon)
 			{
 				_spamFadeTime += (float)gt.Elapsed.TotalSeconds;
@@ -322,13 +334,13 @@ namespace ICanMakeAClone.ONAF2
 				CHEAT_OwlInvincibility = !CHEAT_OwlInvincibility;
 			}
 
-			if (_flipUpEnabled && input.GetMousePosPx(Main.WindowSize).Y >= FLIPUP_THRESHOLD && !_isMouseLingering && !IsJumpscaring)
+			if (_flipUpEnabled && Bot.MousePos.Y >= FLIPUP_THRESHOLD && !_isMouseLingering && !IsJumpscaring)
 			{
 				Laptop.ToggleLaptop();
 				_isMouseLingering = true;
 			}
 			
-			if (input.GetMousePosPx(Main.WindowSize).Y < FLIPUP_THRESHOLD && _isMouseLingering && !IsJumpscaring)
+			if (Bot.MousePos.Y < FLIPUP_THRESHOLD && _isMouseLingering && !IsJumpscaring)
 			{
 				_isMouseLingering = false;
 			}
@@ -341,8 +353,8 @@ namespace ICanMakeAClone.ONAF2
 			{
 				if (gt.FrameCount % 2 == 0)
 				{
-					jumpscareShakeOffset = new Vector2((float)((Rand.NextDouble() * JUMPSCARE_SHAKE_RANGE) + JUMPSCARE_SHAKE_MIN), 
-						(float)((Rand.NextDouble() * JUMPSCARE_SHAKE_RANGE) + JUMPSCARE_SHAKE_MIN));
+					jumpscareShakeOffset = new Vector2((float)(Rand.NextDouble() * JUMPSCARE_SHAKE_RANGE + JUMPSCARE_SHAKE_MIN), 
+						(float)(Rand.NextDouble() * JUMPSCARE_SHAKE_RANGE + JUMPSCARE_SHAKE_MIN));
 				}
 
 				if (Main.UI.State == UIState.Laptop)
