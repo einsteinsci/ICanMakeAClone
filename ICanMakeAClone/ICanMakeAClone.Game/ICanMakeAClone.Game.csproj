@@ -72,6 +72,8 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AI\AIBase.cs" />
+    <Compile Include="AI\PsychicAI.cs" />
     <Compile Include="AI\IPlayerSource.cs" />
     <Compile Include="AI\PlayerMouseInput.cs" />
     <Compile Include="CameraOffsetState.cs" />

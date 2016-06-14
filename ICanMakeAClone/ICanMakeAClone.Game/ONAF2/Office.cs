@@ -288,13 +288,12 @@ namespace ICanMakeAClone.ONAF2
 
 				muteButtonTimer.Update(gameTime);
 			}
-
-			Vector2 mousePos = input.GetMousePosPx(WindowSize);
-			if (mousePos.X >= 0 && mousePos.X < SIDE_PAN_WIDTH && !Level.IsJumpscaring)
+			
+			if (Bot.MousePos.X >= 0 && Bot.MousePos.X < SIDE_PAN_WIDTH && !Level.IsJumpscaring)
 			{
 				CameraOffset = new Vector2(Math.Min(CameraOffset.X + SIDE_PAN_SPEED, 0), 0);
 			}
-			else if (mousePos.X <= WindowSize.X && mousePos.X > WindowSize.X - SIDE_PAN_WIDTH && !Level.IsJumpscaring)
+			else if (Bot.MousePos.X <= WindowSize.X && Bot.MousePos.X > WindowSize.X - SIDE_PAN_WIDTH && !Level.IsJumpscaring)
 			{
 				CameraOffset = new Vector2(Math.Max(CameraOffset.X - SIDE_PAN_SPEED, MAX_CAMERA_OFFSET), 0);
 			}

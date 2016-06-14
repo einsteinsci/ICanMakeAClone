@@ -326,7 +326,7 @@ namespace ICanMakeAClone.ONAF2
 
 				if (prev != UIState.Office)
 				{
-					Main.Level.Reset();
+					Main.Level.Reset(); // should never happen
 				}
 				else
 				{

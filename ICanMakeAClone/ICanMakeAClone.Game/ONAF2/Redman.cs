@@ -45,6 +45,9 @@ namespace ICanMakeAClone.ONAF2
 		public int ProgressBarCount
 		{ get; private set; }
 
+		public Vector2 CurrentWindowOffset
+		{ get; private set; }
+
 		public override string Name => "Redman";
 
 		internal SpriteSheet gameUISprites => Level.gameUISprites;
@@ -58,8 +61,6 @@ namespace ICanMakeAClone.ONAF2
 
 		private float _warningIconFlashTime;
 		internal bool warningIconVisible;
-
-		private Vector2 _currentWindowOffset;
 
 		public Redman(Level level) : base(level)
 		{
@@ -75,9 +76,9 @@ namespace ICanMakeAClone.ONAF2
 
 			float x = Rand.Next((int)MIN_WINDOW_OFFSET.X, (int)MAX_WINDOW_OFFSET.X);
 			float y = Rand.Next((int)MIN_WINDOW_OFFSET.Y, (int)MAX_WINDOW_OFFSET.Y);
-			_currentWindowOffset = new Vector2(x, y);
+			CurrentWindowOffset = new Vector2(x, y);
 
-			cancelButton = new InputRegion(_currentWindowOffset + CANCEL_BUTTON_HITBOX_OFFSET,
+			cancelButton = new InputRegion(CurrentWindowOffset + CANCEL_BUTTON_HITBOX_OFFSET,
 				CANCEL_BUTTON_HITBOX_SIZE, true, (n) => { Reset(); });
 
 			Manager.soundPopup.Play();
@@ -112,7 +113,7 @@ namespace ICanMakeAClone.ONAF2
 
 			if (IsVirusUp && !IsRedScreenOfDeathUp && Level.UI.State == UIState.Laptop)
 			{
-				cancelButton?.Update(input, Level.Main.WindowSize);
+				cancelButton?.Update(Level.Bot);
 			}
 
 			if (IsReady && !IsVirusUp && !IsRedScreenOfDeathUp)
@@ -191,18 +192,18 @@ namespace ICanMakeAClone.ONAF2
 
 			if (IsVirusUp)
 			{
-				gameUISprites["RedmanEXE"].Draw(sb, _currentWindowOffset);
+				gameUISprites["RedmanEXE"].Draw(sb, CurrentWindowOffset);
 
 				if (warningIconVisible)
 				{
-					gameUISprites["RedmanWarning"].Draw(sb, _currentWindowOffset + WINDOW_WARNING_OFFSET);
+					gameUISprites["RedmanWarning"].Draw(sb, CurrentWindowOffset + WINDOW_WARNING_OFFSET);
 				}
 
 				int x = (int)WINDOW_BAR_OFFSET.X;
 				for (int i = 0; i < ProgressBarCount; i++)
 				{
 					Vector2 barOffset = new Vector2(x, WINDOW_BAR_OFFSET.Y);
-					gameUISprites["BarSegment"].Draw(sb, _currentWindowOffset + barOffset);
+					gameUISprites["BarSegment"].Draw(sb, CurrentWindowOffset + barOffset);
 
 					x += BAR_PER_OFFSET;
 				}

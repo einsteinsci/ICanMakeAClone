@@ -174,11 +174,11 @@ namespace ICanMakeAClone.ONAF2
 
 			VolumeController = new SoundVolumeController();
 
-			CHEAT_InfiniteExposure = true;
-			CHEAT_InfiniteBattery = true;
+			CHEAT_InfiniteExposure = false;
+			CHEAT_InfiniteBattery = false;
 			CHEAT_MapDebug = true;
 			CHEAT_MonstersStayPut = false;
-			CHEAT_OwlInvincibility = true;
+			CHEAT_OwlInvincibility = false;
 
 			Bot = new PlayerMouseInput(this);
 		}
@@ -332,6 +332,24 @@ namespace ICanMakeAClone.ONAF2
 			if (input.IsKeyPressed(Keys.F11))
 			{
 				CHEAT_OwlInvincibility = !CHEAT_OwlInvincibility;
+			}
+
+			// ESC returns to main menu
+			if (input.IsKeyPressed(Keys.Escape))
+			{
+				UI.SetState(UIState.MainMenu);
+			}
+
+			// Bot switch
+			if (input.IsKeyPressed(Keys.F1))
+			{
+				Bot = new PlayerMouseInput(this);
+				Bot.Reset();
+			}
+			else if (input.IsKeyPressed(Keys.F2))
+			{
+				Bot = new PsychicAI(this);
+				Bot.Reset();
 			}
 
 			if (_flipUpEnabled && Bot.MousePos.Y >= FLIPUP_THRESHOLD && !_isMouseLingering && !IsJumpscaring)
@@ -497,6 +515,11 @@ namespace ICanMakeAClone.ONAF2
 			{
 				Color transparency = Util.MakeTransparency(_spamFadeTime / SPAM_FADE_TIME);
 				Laptop.miscScreens["SixAM"].Draw(sb, Vector2.Zero, transparency, Vector2.One);
+			}
+
+			if (Bot.ShowsMouse)
+			{
+				gameUISprites["AIMouse"].Draw(sb, Bot.MousePos);
 			}
 		}
 	}

@@ -157,6 +157,12 @@ namespace ICanMakeAClone.ONAF2
 				}
 			}
 
+			if (input.IsKeyPressed(Keys.U))
+			{
+				Patience = 100;
+				IsActive = true;
+			}
+
 			if (gt.FrameCount % 2 == 0)
 			{
 				float x = (float)Rand.NextDouble() * 4.0f - 2.0f;
@@ -197,7 +203,7 @@ namespace ICanMakeAClone.ONAF2
 				if (Patience == 0)
 				{
 					StartSpook();
-					Patience = Level.IsHardBoiled ? START_PATIENCE_HARDBOILED : START_PATIENCE;
+					//Patience = Level.IsHardBoiled ? START_PATIENCE_HARDBOILED : START_PATIENCE;
 				}
 			}
 
@@ -239,7 +245,7 @@ namespace ICanMakeAClone.ONAF2
 					spookFrame = 0;
 					_lingerTime = SPOOK_LINGER_TIME;
 					_showSpook = false;
-					//Patience = Level.IsHardBoiled ? START_PATIENCE_HARDBOILED : START_PATIENCE;
+					Patience = Level.IsHardBoiled ? START_PATIENCE_HARDBOILED : START_PATIENCE;
 				}
 			}
 		}
