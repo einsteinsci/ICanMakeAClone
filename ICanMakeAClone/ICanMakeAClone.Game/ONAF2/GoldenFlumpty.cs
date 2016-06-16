@@ -119,7 +119,7 @@ namespace ICanMakeAClone.ONAF2
 				soundDetect.Play();
 			}
 
-			if (Level.TimeSinceMidnight >= ACTIVATE_TIME)
+			if (Level.TimeSinceMidnight >= _activateTime)
 			{
 				IsActive = true;
 			}

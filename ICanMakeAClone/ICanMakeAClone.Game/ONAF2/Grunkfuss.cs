@@ -27,7 +27,7 @@ namespace ICanMakeAClone.ONAF2
 		public const float SCREAM_DELAY = 0.15f;
 
 		public static readonly TimeSpan ACTIVATE_TIME = TimeSpan.FromHours(2.1);
-		public static readonly TimeSpan ACTIVATE_TIME_HARDBOILED = TimeSpan.FromHours(1.0);
+		public static readonly TimeSpan ACTIVATE_TIME_HARDBOILED = TimeSpan.FromMinutes(58);
 
 		public static readonly Vector2 SPOOK_MAIN_OFFSET = new Vector2(0, -5);
 		public static readonly Vector2 ACTIVE_OFFSET = new Vector2(980, 17);

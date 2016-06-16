@@ -25,7 +25,7 @@ namespace ICanMakeAClone.AI
 	{
 		public const int TRIGGER_PATIENCE = 120;
 
-		public const float TIME_PER_CAMERA = 0.15f;
+		public const float TIME_PER_CAMERA = 0.05f;
 
 		public static readonly Vector2 CAMERA_BUTTON_TARGET = new Vector2(32, 22);
 
@@ -33,12 +33,17 @@ namespace ICanMakeAClone.AI
 
 		public bool IsFlumptyAboutToSpook => !IsLaptopUp && Level.Monsters.Flumpty.AboutToSpook;
 
+		public bool IsBBBAboutToSpook => !Level.Monsters.BBB.IsRetreating && KnownBBBPos == BirthdayBoyBlam.Position.OfficeEntry;
+
 		public bool IsCoastClear => !Level.Monsters.IsSpooked && !IsFlumptyAboutToSpook && !PatienceInDanger &&
-			KnownEyesaurPos != Eyesaur.Position.OfficeEntry;
+			KnownEyesaurPos != Eyesaur.Position.OfficeEntry && !IsBBBAboutToSpook;
 
 		public bool GoldenFlumptyInOffice => Level.Monsters.GoldenFlumpty.IsInOffice;
 
 		public bool PatienceInDanger => KnownPatience != null && KnownPatience.Value < TRIGGER_PATIENCE;
+
+		public bool AnybodyAtOffice => KnownFlumptyPos == Flumpty.Position.OfficeEntry || 
+			KnownBBBPos == BirthdayBoyBlam.Position.OfficeEntry || KnownEyesaurPos == Eyesaur.Position.OfficeEntry;
 
 		public CameraIndex Cam => Level.Laptop.ActiveCamera;
 
@@ -72,6 +77,7 @@ namespace ICanMakeAClone.AI
 		private bool _isEyesaurExposing;
 
 		private bool _isEyesaurClose;
+		private bool _isBBBClose;
 
 		private bool _laptopUpForGoldenFlumpty;
 
@@ -217,6 +223,22 @@ namespace ICanMakeAClone.AI
 			{
 				KnownBBBPos = Level.Monsters.BBB.Pos;
 				_hasFoundBBB = true;
+
+				if (KnownBBBPos == BirthdayBoyBlam.Position.Cam7_KevinJr)
+				{
+					_isBBBClose = true;
+				}
+				else if (KnownBBBPos != BirthdayBoyBlam.Position.OfficeEntry)
+				{
+					_isBBBClose = false;
+				}
+			}
+
+			if (_isBBBClose && Cam == CameraIndex.Cam7 && monsterCam == null)
+			{
+				KnownBBBPos = BirthdayBoyBlam.Position.OfficeEntry;
+				_isBBBExposing = true;
+				DoingLaptopThings = false;
 			}
 
 			monsterCam = Level.Monsters.Eyesaur.GetCameraVisible();
@@ -228,6 +250,10 @@ namespace ICanMakeAClone.AI
 				if (KnownEyesaurPos == Eyesaur.Position.Cam6)
 				{
 					_isEyesaurClose = true;
+				}
+				else if (KnownEyesaurPos != Eyesaur.Position.OfficeEntry)
+				{
+					_isEyesaurClose = false;
 				}
 			}
 
@@ -291,7 +317,8 @@ namespace ICanMakeAClone.AI
 
 			CheckPostSpook();
 
-			if (KnownEyesaurPos == Eyesaur.Position.OfficeEntry && !Level.Monsters.Eyesaur.IsRetreating)
+			if ((KnownEyesaurPos == Eyesaur.Position.OfficeEntry && !Level.Monsters.Eyesaur.IsRetreating) ||
+				(KnownBBBPos == BirthdayBoyBlam.Position.OfficeEntry && !Level.Monsters.BBB.IsRetreating))
 			{
 				if (!IsLaptopUp && IsLightOn)
 				{
@@ -303,18 +330,25 @@ namespace ICanMakeAClone.AI
 			}
 
 			if (Level.Monsters.IsExposed || IsFlumptyAboutToSpook || 
-				KnownBBBPos == BirthdayBoyBlam.Position.OfficeEntry || 
+				(KnownBBBPos == BirthdayBoyBlam.Position.OfficeEntry && Level.Monsters.BBB.IsRetreating) || 
 				(KnownEyesaurPos == Eyesaur.Position.OfficeEntry && Level.Monsters.Eyesaur.IsRetreating) || 
 				KnownFlumptyPos == Flumpty.Position.OfficeEntry ||
 				PatienceInDanger)
 			{
 				if (Redman.IsVirusUp && Redman.ProgressBarCount > 7 && !IsLaptopUp)
 				{
+					if (!IsLightOn)
+					{
+						// Sacrifice exposure for redman
+						TargetLight = true;
+						return;
+					}
+
 					ToggleLaptop();
 					return;
 				}
 
-				if (!IsCoastClear)
+				if (!IsCoastClear || IsBBBAboutToSpook)
 				{
 					if (IsLaptopUp)
 					{
@@ -354,8 +388,9 @@ namespace ICanMakeAClone.AI
 				return;
 			}
 
-			if ((Level.LaptopBattery >= 1.0f && !IsLaptopUp && !Level.Laptop.IsLaptopSwitching) || 
-				(Redman.IsVirusUp && Redman.ProgressBarCount > 7))
+			bool laptopReady = Level.LaptopBattery >= 1.0f && !IsLaptopUp && !Level.Laptop.IsLaptopSwitching;
+			bool redmanDanger = Redman.IsVirusUp && Redman.ProgressBarCount > 7;
+			if ((laptopReady && !AnybodyAtOffice) || redmanDanger)
 			{
 				ToggleLaptop();
 				_justFlippedUpCamera = true;

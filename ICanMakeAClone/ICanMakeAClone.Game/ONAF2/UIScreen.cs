@@ -39,6 +39,7 @@ namespace ICanMakeAClone.ONAF2
 
 		public const float DEBUG_OFFSET = 50;
 		public const float DEBUG_LINE_SPACING = 13;
+		public const float SURVIVE_HARDBOILED_OFFSET = 45.0f;
 
 		public const float RARE_STARTUP_TIME = 7.0f;
 		public const float DEATH_STATIC_TIME = 5.0f;
@@ -54,6 +55,7 @@ namespace ICanMakeAClone.ONAF2
 
 		public const float VOLUME_MIN_THRESHOLD = 0.02f;
 		public const float VOLUME_MAX_THRESHOLD = 0.98f;
+
 
 		public static readonly Vector2 MENU_OFFSET = new Vector2(40, 16);
 		public static readonly Vector2 RECORD_PLAYER_OFFSET = new Vector2(576, 25);
@@ -173,7 +175,7 @@ namespace ICanMakeAClone.ONAF2
 					}
 					else
 					{
-						SetStateNextFrame(UIState.Office);
+						SetStateNextFrame(UIState.Survive);
 					}
 
 					Main.Level.IsHardBoiled = true;
@@ -186,7 +188,7 @@ namespace ICanMakeAClone.ONAF2
 					}
 					else
 					{
-						SetStateNextFrame(UIState.Office);
+						SetStateNextFrame(UIState.Survive);
 					}
 
 					Main.Level.IsHardBoiled = false;
@@ -419,8 +421,12 @@ namespace ICanMakeAClone.ONAF2
 			{
 				alpha = (float)(timer.TimeLeft.TotalSeconds / timer.InitialTime.TotalSeconds);
 			}
+			sb.DrawString(Main.Level.hourFont, text, new Vector2(x, y), Util.MakeTransparency(alpha));
 
-			sb.DrawString(Main.Level.hourFont, "Survive until 6 AM", new Vector2(x, y), Util.MakeTransparency(alpha));
+			text = "(Hard Boiled Mode)";
+			y += SURVIVE_HARDBOILED_OFFSET;
+			x = Main.WindowCenter.X - Main.Level.hourFont.MeasureString(text).X / 2.0f;
+			sb.DrawString(Main.Level.hourFont, text, new Vector2(x, y), Util.MakeTransparency(alpha));
 		}
 
 		#endregion
