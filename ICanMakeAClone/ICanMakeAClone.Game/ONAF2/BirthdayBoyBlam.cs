@@ -104,6 +104,8 @@ namespace ICanMakeAClone.ONAF2
 
 		public override string Name => "BBB";
 
+		public bool IsDoneSpooking => spookFrame > SPOOK_EXPOSURE_RETREAT;
+
 		internal SpriteSheet spookSprites;
 		internal SpriteSheet roomSprites;
 

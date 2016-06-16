@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 using SiliconStudio.Xenko.Engine;
+// ReSharper disable ClassNeverInstantiated.Global
 
 namespace ICanMakeAClone
 {

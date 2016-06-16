@@ -351,6 +351,11 @@ namespace ICanMakeAClone.ONAF2
 				Bot = new PsychicAI(this);
 				Bot.Reset();
 			}
+			else if (input.IsKeyPressed(Keys.F3))
+			{
+				Bot = new SmartAI(this);
+				Bot.Reset();
+			}
 
 			if (_flipUpEnabled && Bot.MousePos.Y >= FLIPUP_THRESHOLD && !_isMouseLingering && !IsJumpscaring)
 			{

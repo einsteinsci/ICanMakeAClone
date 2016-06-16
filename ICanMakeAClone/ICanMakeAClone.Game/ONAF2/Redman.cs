@@ -116,7 +116,7 @@ namespace ICanMakeAClone.ONAF2
 				cancelButton?.Update(Level.Bot);
 			}
 
-			if (IsReady && !IsVirusUp && !IsRedScreenOfDeathUp)
+			if (IsReady && !IsVirusUp && !IsRedScreenOfDeathUp && !Level.CHEAT_MonstersStayPut)
 			{
 				if (Rand.Next(POPUP_RARITY) == 0)
 				{

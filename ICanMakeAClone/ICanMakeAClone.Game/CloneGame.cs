@@ -17,8 +17,6 @@ namespace ICanMakeAClone
 {
 	public class CloneGame : Game
 	{
-		internal Texture mapTexture;
-
 		public Vector2 WindowSize
 		{
 			get
@@ -60,8 +58,6 @@ namespace ICanMakeAClone
 
 		public void LoadRealContent()
 		{
-			mapTexture = Content.Load<Texture>("Map");
-
 			ONAF2Component.LoadContent(Content);
 		}
 

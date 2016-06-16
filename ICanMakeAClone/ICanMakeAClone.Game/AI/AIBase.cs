@@ -51,6 +51,8 @@ namespace ICanMakeAClone.AI
 
 		public bool IsLaptopUp => Level.UI.State == UIState.Laptop;
 
+		public bool IsLightOn => Level.Office.IsLightOn;
+
 		protected AIBase(Level level)
 		{
 			Level = level;
@@ -103,6 +105,11 @@ namespace ICanMakeAClone.AI
 					DoingLaptopThings = true;
 				}
 			}
+
+			if (!IsLaptopUp)
+			{
+				int stuppid = 0;
+			}
 		}
 
 		public virtual void Update(GameTime gt, InputManager input)
@@ -118,7 +125,7 @@ namespace ICanMakeAClone.AI
 
 			RunAI(gt);
 
-			if (!IsLaptopUp)
+			if (!IsLaptopUp && !Level.Laptop.IsLaptopSwitching)
 			{
 				if (TargetedVent == VentState.Left)
 				{

@@ -78,8 +78,7 @@ namespace ICanMakeAClone.ONAF2
 		public Position Pos
 		{ get; private set; }
 
-		public bool IsActive
-		{ get; private set; }
+		public bool IsRetreating => spookFrame > SPOOK_EXPOSURE_RETREAT;
 
 		public bool IsEmerged => Pos != Position.Cam1_Waiting;
 

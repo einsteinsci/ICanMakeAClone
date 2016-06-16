@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using ICanMakeAClone.AI;
+
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Core.Serialization.Assets;
 using SiliconStudio.Xenko.Audio;
@@ -171,6 +174,7 @@ namespace ICanMakeAClone.ONAF2
 				else
 				{
 					DoThunk(Manager.soundThunk1);
+					(Level.Bot as SmartAI)?.OnOwlThunk();
 				}
 				break;
 			case Position.VentExitE:
@@ -181,6 +185,7 @@ namespace ICanMakeAClone.ONAF2
 				else
 				{
 					DoThunk(Manager.soundThunk2);
+					(Level.Bot as SmartAI)?.OnOwlThunk();
 				}
 				break;
 			}

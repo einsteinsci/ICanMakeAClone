@@ -74,6 +74,8 @@ namespace ICanMakeAClone.ONAF2
 		public int Patience
 		{ get; private set; }
 
+		public bool IsRetreating => spookFrame > SPOOK_EXPOSURE_RETREAT;
+
 		public override string Name => "Grunkfuss";
 
 		internal int spookFrame

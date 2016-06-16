@@ -138,7 +138,7 @@ namespace ICanMakeAClone.ONAF2
 				// IsEnabled is meaningless here. Instead I will use _updateRoomInputs to handle all at once.
 				CameraIndex clone = ci; // Otherwise ci is passed by reference into lambda
 				roomInputs.Add(ci, new InputRegion(MAP_OFFSET + MAP_CAMERA_OFFSETS[ci], ROOM_INPUT_SIZE, true, (i) => {
-					if (ActiveCamera == clone)
+					if (ActiveCamera == clone || Level.LaptopBattery <= 0.0f || IsRebooting)
 					{
 						return;
 					}
@@ -259,6 +259,11 @@ namespace ICanMakeAClone.ONAF2
 			res.Add("Chill Bar Pos: " + _chillBarOffset);
 			res.Add("Current Room: " + ActiveCamera);
 			res.Add("Battery Left: " + Level.LaptopBattery.ToString("F2"));
+			if (IsRebooting)
+			{
+				res.Add("REBOOTING");
+			}
+
 			res.Add("");
 
 			return res;

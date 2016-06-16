@@ -90,7 +90,7 @@ namespace ICanMakeAClone.AI
 				EyesaurPos == Eyesaur.Position.OfficeEntry ||
 				Patience < 30)
 			{
-				if (Level.Office.IsLightOn && !Redman.IsVirusUp)
+				if (IsLightOn && !Redman.IsVirusUp)
 				{
 					TargetLight = true;
 				}
@@ -99,7 +99,7 @@ namespace ICanMakeAClone.AI
 			if (FlumptyPos != Flumpty.Position.OfficeEntry &&
 				BBBPos != BirthdayBoyBlam.Position.OfficeEntry &&
 				EyesaurPos != Eyesaur.Position.OfficeEntry &&
-				!ClownSpooking && Patience >= 30 && !Level.Office.IsLightOn) // coast clear
+				!ClownSpooking && Patience >= 30 && !IsLightOn) // coast clear
 			{
 				TargetLight = true;
 			}
@@ -116,7 +116,7 @@ namespace ICanMakeAClone.AI
 			}
 			else
 			{
-				if (Level.Office.IsLightOn)
+				if (IsLightOn)
 				{
 					ToggleLaptop();
 				}

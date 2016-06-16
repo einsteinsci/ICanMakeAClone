@@ -107,6 +107,8 @@ namespace ICanMakeAClone.ONAF2
 
 		public override string Name => "Flumpty";
 
+		public bool AboutToSpook => _showSpook && spookFrame <= SPOOK_EXPOSURE_ACTIVE;
+
 		internal SpriteSheet spookSprites;
 		internal SpriteSheet roomSprites;
 
